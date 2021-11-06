@@ -4,7 +4,7 @@ function Metrics() {
     return (
         <div className='Metrics'>
             <p>
-                This is my paragraph    
+                This is my paragraph
             </p>            
         </div>
     )
