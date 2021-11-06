@@ -1,19 +1,19 @@
 import './App.css';
 import './pages/Metrics';
 import Metrics from './pages/Metrics';
-import Sidebar from './components/Sidebar';
+import Sidebar from './components/Sidebar/Sidebar';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Router>
         <Sidebar/>
-        <Switch>
+        <Routes>
           <Route path='/' />
-        </Switch>
-        <Metrics/>
+        </Routes>
       </Router>
-    </div>
+    </>
   );
 }
 
