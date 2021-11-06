@@ -2,7 +2,7 @@ import React from 'react'
 
 function Home() {
     return (
-        <div>
+        <div className='home'>
             <h1>
                 Here is where the home screen would go
             </h1>

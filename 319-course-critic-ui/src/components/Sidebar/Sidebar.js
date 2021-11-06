@@ -1,24 +1,16 @@
 import React, {useState} from 'react';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './Sidebar.css';
  
 function Sidebar() {
 
-    // const [sidebar, setSidebar] = useState(false);
-
-    // const showSidebar = () => setSidebar(!sidebar);
-
     return (
         <>
             <nav className='nav-menu active'>
                 <ul className='nav-menu-items'>
-                    <li className='navbar-toggle'>
-                        <Link to='#' className='menu-bars'>
-                            <AiIcons.AiOutlineClose />
-                        </Link>
+                    <li className='navbar-title'>
+                        Course Critic
                     </li>
                     {SidebarData.map((item, index) => {
                         return (

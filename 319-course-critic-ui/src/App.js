@@ -1,7 +1,10 @@
 import './App.css';
 import './pages/Metrics';
-import Metrics from './pages/Metrics';
 import Sidebar from './components/Sidebar/Sidebar';
+import Classes from './pages/Classes';
+import Home from './pages/Home';
+import Profile from './pages/Profile';
+
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 function App() {
@@ -10,7 +13,9 @@ function App() {
       <Router>
         <Sidebar/>
         <Routes>
-          <Route path='/' />
+          <Route path='/' exact element={<Home />}></Route>
+          <Route path='/classes' element={<Classes />}></Route>
+          <Route path='/profile' element={<Profile />}></Route>
         </Routes>
       </Router>
     </>
