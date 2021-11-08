@@ -1,9 +1,10 @@
 import './App.css';
 import AssignmentFeed from './AssignmentFeed';
+import AssignmentDiscussion from './AssignmentDiscussion';
 
 function App() {
   return (
-    <AssignmentFeed />
+    <AssignmentDiscussion />
   )
 }
 

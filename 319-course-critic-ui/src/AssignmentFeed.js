@@ -19,6 +19,6 @@ export default function AssignmentFeed() {
             <input type="button" id="viewDiscussion" name="viewDiscussion" value="View Discussion"></input>
         </div>
     </body>
-</html>
+    </html>
     )
 }
