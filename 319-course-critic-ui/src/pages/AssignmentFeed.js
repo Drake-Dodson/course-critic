@@ -1,7 +1,8 @@
 import React from 'react'
 import './AssignmentFeed.css'
-
+import {Link } from "react-router-dom";
 export default function AssignmentFeed() {
+
     return (
     <html>
         <head>
@@ -16,9 +17,13 @@ export default function AssignmentFeed() {
         <div className='asBorder'>
             <h2>[Assignment name]</h2>
             <p>Description of assignment goes here</p>
-            <input type="button" id="viewDiscussion" name="viewDiscussion" value="View Discussion"></input>
+            <Link to="/assignmentdiscussion"><button>
+              View Discussion
+            </button>
+            </Link>
         </div>
     </body>
     </html>
     )
+    
 }

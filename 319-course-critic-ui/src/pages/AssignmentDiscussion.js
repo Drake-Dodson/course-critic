@@ -1,5 +1,6 @@
 import React from 'react'
 import './AssignmentFeed.css'
+import {Link} from "react-router-dom";
 
 export default function AssignmentDiscussion() {
     return (
@@ -8,7 +9,10 @@ export default function AssignmentDiscussion() {
                 <title>Assignment Discussion</title>
             </head>
             <body>
-                <input type="button" id="backToAssignmentFeed" name="backToAssignmentFeed" value="Back to Assignments"></input>
+                <Link to="/"><button>
+                    Back to Assignments
+                </button>
+                </Link>
                 <h1>[Assignment name]: Discussion</h1>
                 <h2>Recent Posts</h2>
 
