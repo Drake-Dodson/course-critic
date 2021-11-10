@@ -10,7 +10,10 @@ function Sidebar() {
             <nav className='nav-menu active'>
                 <ul className='nav-menu-items'>
                     <li className='navbar-title'>
-                        Course Critic
+                        <h1>
+                            Course <br/>
+                            Critic
+                        </h1>
                     </li>
                     {SidebarData.map((item, index) => {
                         return (

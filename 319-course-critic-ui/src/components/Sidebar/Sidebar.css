@@ -7,13 +7,10 @@
 }
 
 .navbar-title{
-    background-color: #F1BE48;
+    font-size: 16;
+    color: #F1BE48;
     align-items: center;
-}
-
-.navbar-title-text{
-    background-color: #F1BE48;
-    align-items: center;
+    list-style: none;
 }
 
 .nav-menu{    
@@ -41,7 +38,7 @@
     transition: 350ms;
 }
 
-.nav-text {
+ .nav-text {
     display: flex;
     justify-content: start;
     align-items: center;
