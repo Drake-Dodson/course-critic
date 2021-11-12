@@ -7,16 +7,30 @@
 }
 
 .navbar-title{
-    font-size: 16;
+
+    position: absolute;
+    width: 107px;
+    height: 31px;
+    left: 22px;
+    top: 12px;
+
+    font-family: Alice;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+
+    /* ISU Yellow */
+
     color: #F1BE48;
-    align-items: center;
-    list-style: none;
 }
 
 .nav-menu{    
     background: #C8102E;
-    
-    position: absolute;
+/*     
+    position: absolute; */
     display: flex;
     width: 150px;
     height: 100vh;
@@ -60,10 +74,15 @@
 }
 
 .nav-text a:hover {
+    background-color: #960820;   
+}
+
+.nav-text a:focus {
     background-color: #F1BE48;   
 }
 
 .nav-menu-items {
+    padding-top: 70px;
     background-color: #C8102E;
 }
 
