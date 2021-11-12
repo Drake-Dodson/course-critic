@@ -11,7 +11,7 @@ export default function AssignmentDiscussion() {
             </head>
             <body>
             <div className='topMargin'>
-                <Link to="/"><button>
+                <Link to="/assignmentfeed"><button>
                     Back to Assignments
                 </button>
                 </Link>
