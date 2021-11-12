@@ -2,16 +2,13 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './Sidebar.css';
- 
+
 function Sidebar() {
 
     return (
         <>
             <nav className='nav-menu active'>
                 <ul className='nav-menu-items'>
-                    <li className='navbar-title'>
-                        Course Critic
-                    </li>
                     {SidebarData.map((item, index) => {
                         return (
                             <li key={index} className={item.cName}>
@@ -23,7 +20,11 @@ function Sidebar() {
                         );
                     })}
                 </ul>
-            </nav>
+            </nav>            
+            <h1 className='navbar-title'>
+                Course <br/>
+                Critic
+            </h1>
         </>
     );
 }
