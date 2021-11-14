@@ -7,7 +7,9 @@ import Profile from './pages/Profile';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AssignmentFeed from './pages/AssignmentFeed';
 import AssignmentDiscussion from './pages/AssignmentDiscussion';
-
+import CreateReview from './pages/CreateReview';
+import ReviewSubmitted from './pages/ReviewSubmitted';
+import CourseReviews from './pages/CourseReviews';
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
           <Route path='/profile' element={<Profile />}></Route>
           <Route path='/assignmentfeed' element={<AssignmentFeed />}></Route>
           <Route path='/assignmentdiscussion' element={<AssignmentDiscussion />}></Route>
+          <Route path='/create_review' element={<CreateReview />}></Route>
+          <Route path='/review_submitted' element={<ReviewSubmitted />}></Route>
+          <Route path='/reviews' element={<CourseReviews />}></Route>
         </Routes>
       </Router>
     </>
