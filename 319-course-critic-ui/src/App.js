@@ -10,6 +10,7 @@ import AssignmentDiscussion from './pages/AssignmentDiscussion';
 import CreateReview from './pages/CreateReview';
 import ReviewSubmitted from './pages/ReviewSubmitted';
 import CourseReviews from './pages/CourseReviews';
+import UserFeed from './pages/UserFeed';
 
 function App() {
   return (
