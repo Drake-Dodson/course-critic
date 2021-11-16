@@ -18,29 +18,24 @@ export default function LogInPage() {
 <h1 style="font-size: 6rem; color: #F1BE48; text-align:center" >Course <br>Critic</h1>
   <form style="text-align:center" id="User Information" action="" >
    
-	<p id="UserNameTitle">
-    <label  for="UserNameTitle">UserName:</label>
-    </p>
-     
-	<p id="UserName">
-    <input id="UserName" name="UserName" type="text" />
-    </p>
-	
-	<p id="PasswordTitle">
-    <label for="PasswordTitle">Password:</label>
+	<p id="Email">
+    <label>Email:<br></label>
+    <input id="email" name="email" type="text"/>
     </p>
      
 	<p id="Password">
-    <input id="Password" name="Password" type="password" />
+    <label>Password:<br></label>
+    <input id="password" name="password" type="password" />
     </p>
-	<p>
+	
+	<p id="Submit">
     <input type="button" id="submit" name="submit" value="Submit"/>
 	</p>
-	<p id="ToSignup">
-    <label for="ToSignup">Dont have an account?</label>
-    </p>
+	<p>
+    <label>Dont have an account?<br></label>
+	<a href="SignUp.js" >SignUp:</a>
+	</p>
    
-	<p><a href="SignUp.js" style="text-align:center">SignUp:</a></p>
    
   </form>
   

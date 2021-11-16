@@ -10,52 +10,40 @@ export default function SignUpPage() {
 <style>
 
 </style>
+<script src="./SignUpValidation.js"></script>
 </head>
 
 <body>
 
  <form style="text-align:center" id="User Information" action="" >
 <h1 style="font-size: 6rem; color: #F1BE48; text-align:center" >Course <br>Critic</h1>
-   <p id="EmailTitle">
-        <label for="EmailTitle">Email:</label>
-      </p>
      
-	   <p id="Email">
+	   <p id="email">
+        <label>Email:<br></label>
         <input id="Email" name="Email" type="text" />
       </p>
    
-	<p id="UserNameTitle">
-        <label for="UserNameTitle">UserName:</label>
-      </p>
      
-	   <p id="UserName">
-        <input id="UserName" name="UserName" type="text" />
-      </p>
-	
-		<p id="PasswordTitle">
-        <label for="PasswordTitle">Password:</label>
-      </p>
-     
-	   <p id="Password">
+	   <p id="password">
+        <label>Password:<br></label>
         <input id="Password" name="Password" type="password" />
       </p>
-	  <p>
 	  
-	  <p id="PasswordConfTitle">
-        <label for="PasswordConfTitle">Password Confirmation:</label>
+	  <p>
       </p>
      
-	   <p id="PasswordConf">
-        <input id="PasswordConf" name="PasswordConf" type="PasswordConf" />
+	   <p id="passwordConf">
+        <label>Password Confirmation:<br></label>
+        <input id="PasswordConf" name="PasswordConf" type="password" />
       </p>
-	  <p>
 	  
-        <input type="button" id="submit" name="submit" value="Submit"/>
+	  <p id="submit">
+	  
+	    <input type="button" id="Submit" name="Submit" value="Submit"/>
 		</p>
-		<p id="ToSignup">
-        <label for="ToSignup">Have an account?</label>
-      </p>  
-	<p><a href="LogIn.js">Login:</a></p>
+		<p>
+        <label>Have an account?<br></label>
+	<a href="LogIn.js">Login:</a></p>
    
   </form>
   
