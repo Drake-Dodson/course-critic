@@ -5,17 +5,13 @@ import { useState } from 'react';
 import AssignmentDiscussion from './AssignmentDiscussion';
 
 export default function WriteADiscussionPostPage() {
-    const postDivs = [];
+    var currPost = sessionStorage.length-1;
 function addToPosts() {
-    alert("getposts called");
-    var titleText = document.getElementById("title");
-    var commentText = document.getElementById("comments");
-    postDivs.push(
-        <div className='asBorder'>
-            <h3>{titleText}</h3>
-            <p>{commentText}</p>
-        </div>
-    )
+    currPost++;
+    var titleText = "" + document.getElementById("title").value;
+    var commentText = "" + document.getElementById("comments").value;
+    var newDiv = "<div className='asBorder'>\n<h3>" + titleText + "</h3>\n<p>" + commentText + "</p>\n</div>";
+    sessionStorage.setItem(currPost, newDiv)
 }
 
     return (
@@ -28,7 +24,8 @@ function addToPosts() {
                 <input type="text" id="title" name="title"/><br/>
                 <label for="comments">Comments:</label><br/>
                 <input type="text" id="comments" name="comments"/><br/>
-                <button onClick={addToPosts}>Submit</button>
+                <Link to="/assignmentdiscussion"><button onClick={addToPosts}>Submit</button>
+                </Link>
             </form> 
 
             <Link to="/assignmentdiscussion"><button>
@@ -40,4 +37,5 @@ function addToPosts() {
         </div>
         </html>
     )
+    
 }

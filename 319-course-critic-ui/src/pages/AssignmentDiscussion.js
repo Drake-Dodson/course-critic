@@ -6,6 +6,18 @@ import WriteADiscussionPostPage from './WriteADiscussionPostPage';
 
 
 export default function AssignmentDiscussion() {
+    function getPosts() {
+        const allPosts = [];
+        var i = 0;
+        while (i < sessionStorage.length)
+        {
+            allPosts.push(sessionStorage.getItem(i));
+            i++;
+        }
+        console.log(sessionStorage);
+        console.log(allPosts);
+        return allPosts;
+    }
     return (
         <html>
             <head>
@@ -17,6 +29,7 @@ export default function AssignmentDiscussion() {
                     Back to Assignments
                 </button>
                 </Link>
+                <button onClick={getPosts}>get posts</button>
                 <h1 id="aName">[Assignment name]: Discussion</h1>
                 <h2>Recent Posts</h2>
                 </div>
@@ -26,8 +39,6 @@ export default function AssignmentDiscussion() {
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
                 </div>
-                
-
                 <div className='bottomMargin'>
                 <Link to="/creatediscussionpost"><button>
                     Create Post
