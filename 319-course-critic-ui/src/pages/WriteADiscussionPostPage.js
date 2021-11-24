@@ -10,7 +10,10 @@ function addToPosts() {
     currPost++;
     var titleText = "" + document.getElementById("title").value;
     var commentText = "" + document.getElementById("comments").value;
-    var newDiv = "<div className='asBorder'>\n<h3>" + titleText + "</h3>\n<p>" + commentText + "</p>\n</div>";
+    var newDiv = "<div class='asBorder'>" + 
+    "<h3>" + titleText + "</h3>" + 
+    "<p>" + commentText + "</p>" + 
+    "</div>";
     sessionStorage.setItem(currPost, newDiv)
 }
 
@@ -24,8 +27,7 @@ function addToPosts() {
                 <input type="text" id="title" name="title"/><br/>
                 <label for="comments">Comments:</label><br/>
                 <input type="text" id="comments" name="comments"/><br/>
-                <Link to="/assignmentdiscussion"><button onClick={addToPosts}>Submit</button>
-                </Link>
+                <button onClick={addToPosts}>Submit</button>
             </form> 
 
             <Link to="/assignmentdiscussion"><button>
