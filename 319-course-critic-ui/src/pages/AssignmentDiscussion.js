@@ -1,25 +1,22 @@
 import React, { useEffect } from 'react'
 import './AssignmentFeed.css'
 import {Link} from "react-router-dom";
-import WriteADiscussionPostPage from './WriteADiscussionPostPage';
-
-
 
 export default function AssignmentDiscussion() {
     useEffect(() => {
         // Run! Like go get some data from an API.
         getPosts();
       }, []);
+
     function getPosts() {
-        const allPosts = [];
         var i = 0;
         while (i < sessionStorage.length)
         {
-            allPosts.push(sessionStorage.getItem(i));
-            document.getElementById("discussion_posts").innerHTML += sessionStorage.getItem(i);
+            document.getElementById("discussion_posts").innerHTML += sessionStorage.getItem('post' + i);
             i++;
         }
     }
+    
     return (
         <html>
             <head>

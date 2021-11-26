@@ -8,6 +8,16 @@
     margin-right: 10px;
 }
 
+.asReplyBorder {
+    border:10px; 
+    border-style:solid; 
+    border-color:#CAC7A7; 
+    background:#CAC7A7;
+    margin-bottom: 15px;
+    margin-left: 200px;
+    margin-right: 10px;
+}
+
 .topMargin {
     margin-top: 15px;
     text-align: center;

@@ -2,13 +2,13 @@ import React from 'react'
 import './AssignmentFeed.css'
 import {Link } from "react-router-dom";
 
-export default function WriteADiscussionPostPage() {
+export default function WriteDiscussionReply() {
     var currPostIdx = sessionStorage.length-1;
 function addToPosts() {
     currPostIdx++;
     var titleText = "" + document.getElementById("title").value;
     var commentText = "" + document.getElementById("comments").value;
-    var newDiv = "<div class='asBorder'>" + 
+    var newDiv = "<div class='asReplyBorder'>" + 
     "<h3>" + titleText + "</h3>" + 
     "<p>" + commentText + "</p>" + 
     "</div>";
@@ -19,7 +19,7 @@ function addToPosts() {
     return (
         <html>
         <div className='leftMargin'>
-            <h1><u>Write a Discussion Post-Assignment Name</u></h1>
+            <h1><u>Write a Discussion Reply</u></h1>
             <form>
                 <label for="title">Title:</label><br/>
                 <input type="text" id="title" name="title"/><br/>
@@ -35,5 +35,4 @@ function addToPosts() {
         </div>
         </html>
     )
-    
 }
