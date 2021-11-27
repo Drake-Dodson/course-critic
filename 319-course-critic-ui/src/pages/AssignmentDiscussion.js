@@ -47,7 +47,7 @@ export default function AssignmentDiscussion() {
             <body>
                 <div id="test">
             <div className='topMargin'>
-                <Link to="/assignmentfeed"><button>
+                <Link to="/assignmentfeed"><button className='isuColorButton'>
                     Back to Assignments
                 </button>
                 </Link>
@@ -58,7 +58,7 @@ export default function AssignmentDiscussion() {
                 <div id="discussion_posts">
                 </div>
                 <div className='bottomMargin'>
-                <Link to="/creatediscussionpost"><button>
+                <Link to="/creatediscussionpost"><button className='isuColorButton'>
                     Create Post
                 </button>
                 </Link>

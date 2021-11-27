@@ -12,7 +12,7 @@ function addToPosts() {
     "<div class='asBorder'>" + 
     "<h3>" + titleText + "</h3>" + 
     "<p>" + commentText + "</p>" + 
-    "<a href='/creatediscussionreply'><button id='reply" + currPostIdx + "'>Reply</button></a>" +
+    "<a href='/creatediscussionreply'><button class='replyButton' id='reply" + currPostIdx + "'>Reply</button></a>" +
     "</div>" + 
     "</div>";
     sessionStorage.setItem('post' + currPostIdx, newDiv);
