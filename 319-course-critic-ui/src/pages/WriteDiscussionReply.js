@@ -3,17 +3,17 @@ import './AssignmentFeed.css'
 import {Link } from "react-router-dom";
 
 export default function WriteDiscussionReply() {
-    var currPostIdx = sessionStorage.length-1;
+
 function addToPosts() {
-    currPostIdx++;
+    var currReplyIdx = sessionStorage.getItem('selectedReply');
+    var preReply = sessionStorage.getItem('post' + currReplyIdx);
     var titleText = "" + document.getElementById("title").value;
     var commentText = "" + document.getElementById("comments").value;
-    var newDiv = "<div class='asReplyBorder'>" + 
+    var newDiv = preReply + "<div class='asReplyBorder'>" + 
     "<h3>" + titleText + "</h3>" + 
     "<p>" + commentText + "</p>" + 
     "</div>";
-    sessionStorage.setItem('post' + currPostIdx, newDiv);
-    console.log(sessionStorage);
+    sessionStorage.setItem('reply' + currReplyIdx, newDiv);
 }
 
     return (

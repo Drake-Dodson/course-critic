@@ -12,9 +12,26 @@ export default function AssignmentDiscussion() {
         var i = 0;
         while (i < sessionStorage.length)
         {
-            document.getElementById("discussion_posts").innerHTML += sessionStorage.getItem('post' + i);
+            if (sessionStorage.getItem('post' + i) != null)
+            {
+                document.getElementById("discussion_posts").innerHTML += sessionStorage.getItem('post' + i);
+            }
             i++;
         }
+        i = 0;
+        while (i < sessionStorage.length)
+        {
+            if (sessionStorage.getItem('reply' + i) != null)
+            {
+                document.getElementById("post" + i).innerHTML += sessionStorage.getItem('reply' + i);
+            }
+            i++;
+        }
+        console.log(document.getElementById("test").innerHTML);
+    }
+
+    function setReplyPost(postIdx) {
+        sessionStorage.setItem('selectedReply', postIdx)
     }
     
     return (
@@ -23,6 +40,7 @@ export default function AssignmentDiscussion() {
                 <title>Assignment Discussion</title>
             </head>
             <body>
+                <div id="test">
             <div className='topMargin'>
                 <Link to="/assignmentfeed"><button>
                     Back to Assignments
@@ -32,18 +50,13 @@ export default function AssignmentDiscussion() {
                 <h2>Recent Posts</h2>
                 </div>
                 <div id="discussion_posts">
-                    <div className='asBorder'>
-                        <h3>Title1</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    </div>
                 </div>
                 <div className='bottomMargin'>
                 <Link to="/creatediscussionpost"><button>
                     Create Post
                 </button>
                 </Link>
+                </div>
                 </div>
             </body>
         </html>

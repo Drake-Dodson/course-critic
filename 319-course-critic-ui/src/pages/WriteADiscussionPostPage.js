@@ -8,17 +8,18 @@ function addToPosts() {
     currPostIdx++;
     var titleText = "" + document.getElementById("title").value;
     var commentText = "" + document.getElementById("comments").value;
-    var newDiv = "<div class='asBorder'>" + 
+    var newDiv = "<div class='asBorder' id='post" + currPostIdx + "'>" + 
     "<h3>" + titleText + "</h3>" + 
     "<p>" + commentText + "</p>" + 
+    "<a href='/creatediscussionreply'><button onClick={setReplyPost(" + currPostIdx + ")}>Reply</button></a>" +
     "</div>";
     sessionStorage.setItem('post' + currPostIdx, newDiv);
-    console.log(sessionStorage);
+    console.log(document.getElementById('test2').innerHTML);
 }
 
     return (
         <html>
-        <div className='leftMargin'>
+        <div className='leftMargin' id='test2'>
             <h1><u>Write a Discussion Post-Assignment Name</u></h1>
             <form>
                 <label for="title">Title:</label><br/>

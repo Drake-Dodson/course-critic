@@ -12,6 +12,7 @@ import ReviewSubmitted from './pages/ReviewSubmitted';
 import CourseReviews from './pages/CourseReviews';
 import UserFeed from './pages/UserFeed';
 import WriteADiscussionPostPage from './pages/WriteADiscussionPostPage'
+import WriteDiscussionReply from './pages/WriteDiscussionReply';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path='/create_review' element={<CreateReview />}></Route>
           <Route path='/review_submitted' element={<ReviewSubmitted />}></Route>
           <Route path='/reviews' element={<CourseReviews />}></Route>
+          <Route path='/creatediscussionreply' element={<WriteDiscussionReply />}></Route>
         </Routes>
       </Router>
     </>
