@@ -8,10 +8,12 @@ function addToPosts() {
     currPostIdx++;
     var titleText = "" + document.getElementById("title").value;
     var commentText = "" + document.getElementById("comments").value;
-    var newDiv = "<div class='asBorder' id='post" + currPostIdx + "'>" + 
+    var newDiv = "<div id='post" + currPostIdx + "'>" + 
+    "<div class='asBorder'>" + 
     "<h3>" + titleText + "</h3>" + 
     "<p>" + commentText + "</p>" + 
-    "<a href='/creatediscussionreply'><button onClick={setReplyPost(" + currPostIdx + ")}>Reply</button></a>" +
+    "<a href='/creatediscussionreply'><button id='reply" + currPostIdx + "'>Reply</button></a>" +
+    "</div>" + 
     "</div>";
     sessionStorage.setItem('post' + currPostIdx, newDiv);
     console.log(document.getElementById('test2').innerHTML);

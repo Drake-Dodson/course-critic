@@ -6,7 +6,11 @@ export default function WriteDiscussionReply() {
 
 function addToPosts() {
     var currReplyIdx = sessionStorage.getItem('selectedReply');
-    var preReply = sessionStorage.getItem('post' + currReplyIdx);
+    var preReply = "";
+    if (sessionStorage.getItem('reply' + currReplyIdx) != null)
+    {
+        preReply = sessionStorage.getItem('reply' + currReplyIdx);
+    }
     var titleText = "" + document.getElementById("title").value;
     var commentText = "" + document.getElementById("comments").value;
     var newDiv = preReply + "<div class='asReplyBorder'>" + 
@@ -14,6 +18,8 @@ function addToPosts() {
     "<p>" + commentText + "</p>" + 
     "</div>";
     sessionStorage.setItem('reply' + currReplyIdx, newDiv);
+    console.log(currReplyIdx);
+    console.log(sessionStorage);
 }
 
     return (

@@ -4,7 +4,6 @@ import {Link} from "react-router-dom";
 
 export default function AssignmentDiscussion() {
     useEffect(() => {
-        // Run! Like go get some data from an API.
         getPosts();
       }, []);
 
@@ -15,6 +14,7 @@ export default function AssignmentDiscussion() {
             if (sessionStorage.getItem('post' + i) != null)
             {
                 document.getElementById("discussion_posts").innerHTML += sessionStorage.getItem('post' + i);
+                document.getElementById("reply" + i).onclick = setReplyPost(i);
             }
             i++;
         }
@@ -28,10 +28,15 @@ export default function AssignmentDiscussion() {
             i++;
         }
         console.log(document.getElementById("test").innerHTML);
+        console.log(sessionStorage);
     }
 
     function setReplyPost(postIdx) {
         sessionStorage.setItem('selectedReply', postIdx)
+    }
+
+    function clearstorage() {
+        sessionStorage.clear();
     }
     
     return (
@@ -46,6 +51,7 @@ export default function AssignmentDiscussion() {
                     Back to Assignments
                 </button>
                 </Link>
+                <button onClick={clearstorage}>clear</button>
                 <h1 id="aName">[Assignment name]: Discussion</h1>
                 <h2>Recent Posts</h2>
                 </div>
