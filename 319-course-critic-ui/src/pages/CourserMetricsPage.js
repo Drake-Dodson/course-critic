@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function CourserMetricsPage() {
     return (
-        <div>
+        <div className="CourserMetricsPage">
 
  
 <h1><u>Com S 319 Course Metrics</u></h1>
