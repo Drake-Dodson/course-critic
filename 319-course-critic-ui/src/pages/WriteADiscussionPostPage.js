@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function WriteADiscussionPostPage() {
     return (
-        <div>
+        <div className="WriteADiscussionPostPage">
             <h1><u>Write a Discussion Post-Assignment Name</u></h1>
  
             <form>
