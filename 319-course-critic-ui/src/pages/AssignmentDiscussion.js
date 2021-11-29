@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 export default function AssignmentDiscussion() {
     useEffect(() => {
         getPosts();
+        document.getElementById("aName").textContent = sessionStorage.getItem('selectedAssignment');
       }, []);
 
     function getPosts() {
