@@ -15,6 +15,13 @@ import WriteADiscussionPostPage from './pages/WriteADiscussionPostPage';
 import UserFeed from './pages/UserFeed';
 
 function App() {
+  const [data, setData] = useState(null);
+  
+  useEffect(() =>{
+    fetch()
+
+  }, []);
+
   return (
     <>
       <Router>

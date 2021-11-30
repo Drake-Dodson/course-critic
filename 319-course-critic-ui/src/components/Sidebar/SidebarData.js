@@ -1,4 +1,5 @@
 import React from 'react';
+import { ClassRepo } from './repositories/ClassRepo.js';
 import * as AiIcons from 'react-icons/ai';
 import * as MdIcons from 'react-icons/md';
 import * as CgIcons from 'react-icons/cg';
@@ -15,7 +16,15 @@ export const SidebarData = [
         title: 'Classes',
         path: '/classes',
         icon: <GiIcons.GiNotebook />,
-        cName: 'nav-text'
+        cName: 'nav-text',
+        subNav: [
+            ClassRepo.map((item, index) => {
+                return {
+                    path: '/classes/' + item.classId, 
+                    title: item.className,
+                }
+            })
+        ]
     },
     {
         title: 'Reviews',

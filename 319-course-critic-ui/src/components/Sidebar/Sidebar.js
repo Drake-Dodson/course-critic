@@ -3,14 +3,19 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './Sidebar.css';
 
-function Sidebar() {
+const Sidebar = () => {
+
+    const [classBar, setClassBar] = useState(false);
+
+    const showClassBar = () => setClassBar(!classBar);
 
     return (
         <>
             <nav className='nav-menu active'>
                 <ul className='nav-menu-items'>
                     {SidebarData.map((item, index) => {
-                        return (
+                        if(item.sidnav){
+                            return (
                             <li key={index} className={item.cName}>
                                 <Link to={item.path}>
                                     {item.icon}
@@ -18,6 +23,8 @@ function Sidebar() {
                                 </Link>
                             </li>
                         );
+                        }
+
                     })}
                 </ul>
             </nav>            
