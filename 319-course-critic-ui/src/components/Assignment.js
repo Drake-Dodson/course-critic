@@ -16,34 +16,62 @@ class Assignment extends React.Component {
     }
 
     render() {
-        var assignmentName = this.props.name;
-        var assignmentDescription = this.props.description;
-        var aIdx = this.props.index;
-        var divId = "a" + aIdx;
-        const ret = (
-            <div id={ReactHtmlParser(divId)} className='asBorder'>
-                <h2>{ReactHtmlParser(assignmentName)}</h2>
-                <p>{ReactHtmlParser(assignmentDescription)}</p>
+        var assignmentArr = [];
+        this.state.assignments = [];
+        if (sessionStorage.getItem('allAssignments') != null)
+        {
+            assignmentArr = JSON.parse(sessionStorage.getItem('allAssignments'));
+            var i = 0;
+            while (i < assignmentArr.length)
+            {
+                var tempName = assignmentArr[i];
+                i++;
+                var tempDesc = assignmentArr[i];
+                i++;
+                var tempIdx = assignmentArr[i];
+                var tempDivId = "a" + tempIdx;
+                i++;
+                const tempRet = (
+                    <div id={ReactHtmlParser(tempDivId)} className='asBorder'>
+                <h2>{ReactHtmlParser(tempName)}</h2>
+                <p>{ReactHtmlParser(tempDesc)}</p>
                 <a href='/assignmentdiscussion'>
-                    <button onClick={ () => this.setSelectedAssignment(assignmentName) } className='replyButton'>
+                    <button onClick={this.setSelectedAssignment.bind(this, tempName)} className='replyButton'>
                         View Discussion
                     </button>
                 </a>
             </div>
-        );
-        this.state.assignments.push(ret);
-        
+                );
+                this.state.assignments.push(tempRet);
+            }
+        }
 
+        if (this.props.name != null && this.props.description != null && this.props.index != null)
+        {
+            var assignmentName = this.props.name;
+            var assignmentDescription = this.props.description;
+            var aIdx = this.props.index;
+            var divId = "a" + aIdx;
+            const ret = (
+                <div id={ReactHtmlParser(divId)} className='asBorder'>
+                    <h2>{ReactHtmlParser(assignmentName)}</h2>
+                    <p>{ReactHtmlParser(assignmentDescription)}</p>
+                    <a href='/assignmentdiscussion'>
+                        <button onClick={this.setSelectedAssignment.bind(this, assignmentName)} className='replyButton'>
+                            View Discussion
+                        </button>
+                    </a>
+                </div>
+            );
+            this.state.assignments.push(ret);
+            assignmentArr.push(assignmentName);
+            assignmentArr.push(assignmentDescription);
+            assignmentArr.push(aIdx);
+            sessionStorage.setItem('allAssignments', JSON.stringify(assignmentArr));
+        }
+        
         return (
             this.state.assignments
-        //     <div className='asBorder'>
-        //     <h2 id="a1">Assignment 1</h2>
-        //     <p>Description of assignment goes here</p>
-        //     <Link to="/assignmentdiscussion"><button onclick="setSelectedAssignment('a1')" id="a1btn">
-        //       View Discussion
-        //     </button>
-        //     </Link>
-        // </div>
         )
     }
 

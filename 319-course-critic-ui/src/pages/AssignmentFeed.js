@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './AssignmentFeed.css'
 import ReactDOM from 'react-dom'
 import Assignment from '../components/Assignment.js'
 export default function AssignmentFeed() {
+
+    useEffect(() => {
+        ReactDOM.render(
+            React.createElement(Assignment), 
+            document.getElementById('allAssignments')
+          );
+      }, []);
 
 var aIdx = 0;
 
@@ -34,7 +41,7 @@ var aIdx = 0;
                 <label for="assignmentDescription">Description:</label><br/>
                 <input type="text" id="assignmentDescription" name="assignmentDescription"/><br/>
             </form> 
-            <button onClick={addAssignment}>Add Assignment</button><br/>
+            <button onClick={addAssignment} className='isuColorButton'>Add Assignment</button><br/>
         </div>
         <div id='allAssignments'>
         </div>

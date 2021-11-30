@@ -38,14 +38,6 @@ class DiscussionPost extends React.Component {
 
         return (
             this.state.posts
-            //document.getElementById("reply" + i).onclick = setReplyPost(i);
-    //         "<div id='post" + currPostIdx + "'>" + 
-    // "<div class='asBorder'>" + 
-    // "<h3>" + titleText + "</h3>" + 
-    // "<p>" + commentText + "</p>" + 
-    // "<a href='/creatediscussionreply'><button class='replyButton' id='reply" + currPostIdx + "'>Reply</button></a>" +
-    // "</div>" + 
-    // "</div>";
         )
     }
 
