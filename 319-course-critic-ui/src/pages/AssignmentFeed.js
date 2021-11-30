@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './AssignmentFeed.css'
 import ReactDOM from 'react-dom'
-import ReactHtmlParser from 'react-html-parser';
-import {Link } from "react-router-dom";
 import Assignment from '../components/Assignment.js'
 export default function AssignmentFeed() {
 
@@ -16,13 +14,7 @@ var aIdx = 0;
         React.createElement(Assignment, {name: aTitle, description: aDescription, index: aIdx}), 
         document.getElementById('allAssignments')
       );
-      
-      console.log(document.getElementById('allAssignments'))
     }
-
-    function setSelectedAssignment(assignmentTitle) {
-      sessionStorage.setItem('selectedAssignment', assignmentTitle);
-  }
 
     return (
     <html>

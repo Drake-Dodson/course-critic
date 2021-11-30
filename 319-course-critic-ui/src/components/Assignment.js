@@ -5,7 +5,7 @@ class Assignment extends React.Component {
 
     constructor (props) {
         super(props);
-        
+
         this.state = {
             assignments: []
         }
@@ -25,13 +25,14 @@ class Assignment extends React.Component {
                 <h2>{ReactHtmlParser(assignmentName)}</h2>
                 <p>{ReactHtmlParser(assignmentDescription)}</p>
                 <a href='/assignmentdiscussion'>
-                    <button onClick={ () => this.setSelectedAssignment(assignmentName) }>
+                    <button onClick={ () => this.setSelectedAssignment(assignmentName) } className='replyButton'>
                         View Discussion
                     </button>
                 </a>
             </div>
         );
         this.state.assignments.push(ret);
+        
 
         return (
             this.state.assignments
