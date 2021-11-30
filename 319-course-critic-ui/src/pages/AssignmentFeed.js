@@ -1,21 +1,28 @@
 import React, { useEffect } from 'react'
 import './AssignmentFeed.css'
+import ReactDOM from 'react-dom'
+import ReactHtmlParser from 'react-html-parser';
 import {Link } from "react-router-dom";
+import Assignment from '../components/Assignment.js'
 export default function AssignmentFeed() {
 
-  useEffect(() => {
-    var i = 1;
-    while (i < 7)
-    {
-      document.getElementById("a" + i + "btn").onclick = setSelectedAssignment("a" + i);
-      i++;
-    }
-    console.log(sessionStorage.getItem('selectedAssignment'));
-  }, []);
+var aIdx = 0;
 
-  function setSelectedAssignment(assignmentId) {
-    sessionStorage.setItem('selectedAssignment', document.getElementById(assignmentId).textContent);
-}
+    function addAssignment () {
+      aIdx++;
+      var aTitle = document.getElementById('assignmentTitle').value;
+      var aDescription = document.getElementById('assignmentDescription').value;
+      ReactDOM.render(
+        React.createElement(Assignment, {name: aTitle, description: aDescription, index: aIdx}), 
+        document.getElementById('allAssignments')
+      );
+      
+      console.log(document.getElementById('allAssignments'))
+    }
+
+    function setSelectedAssignment(assignmentTitle) {
+      sessionStorage.setItem('selectedAssignment', assignmentTitle);
+  }
 
     return (
     <html>
@@ -29,55 +36,15 @@ export default function AssignmentFeed() {
             <h1>
                 [course name]: Assignments
             </h1>
+            <form>
+                <label for="assignmentTitle">Title:</label><br/>
+                <input type="text" id="assignmentTitle" name="assignmentTitle"/><br/>
+                <label for="assignmentDescription">Description:</label><br/>
+                <input type="text" id="assignmentDescription" name="assignmentDescription"/><br/>
+            </form> 
+            <button onClick={addAssignment}>Add Assignment</button><br/>
         </div>
-
-        <div className='asBorder'>
-            <h2 id="a1">Assignment 1</h2>
-            <p>Description of assignment goes here</p>
-            <Link to="/assignmentdiscussion"><button id="a1btn">
-              View Discussion
-            </button>
-            </Link>
-        </div>
-        <div className='asBorder'>
-            <h2 id="a2">Assignment 2</h2>
-            <p>Description of assignment goes here</p>
-            <Link to="/assignmentdiscussion"><button id="a2btn">
-              View Discussion
-            </button>
-            </Link>
-        </div>
-        <div className='asBorder'>
-            <h2 id="a3">Assignment 3</h2>
-            <p>Description of assignment goes here</p>
-            <Link to="/assignmentdiscussion"><button id="a3btn">
-              View Discussion
-            </button>
-            </Link>
-        </div>
-        <div className='asBorder'>
-            <h2 id="a4">Assignment 4</h2>
-            <p>Description of assignment goes here</p>
-            <Link to="/assignmentdiscussion"><button id="a4btn">
-              View Discussion
-            </button>
-            </Link>
-        </div>
-        <div className='asBorder'>
-            <h2 id="a5">Assignment 5</h2>
-            <p>Description of assignment goes here</p>
-            <Link to="/assignmentdiscussion"><button id="a5btn">
-              View Discussion
-            </button>
-            </Link>
-        </div>
-        <div className='asBorder'>
-            <h2 id="a6">Assignment 6</h2>
-            <p>Description of assignment goes here</p>
-            <Link to="/assignmentdiscussion"><button id="a6btn">
-              View Discussion
-            </button>
-            </Link>
+        <div id='allAssignments'>
         </div>
     </body>
     </html>
