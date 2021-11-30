@@ -6,12 +6,38 @@ import DiscussionPost from '../components/DiscussionPost.js'
 
 export default function AssignmentDiscussion() {
     useEffect(() => {
-        // getPosts();
+        // getPosts(); allCurrPostIdx
+        var allCurrPostIdx;
         document.getElementById("aName").textContent = sessionStorage.getItem('selectedAssignment');
         ReactDOM.render(
-            React.createElement(DiscussionPost, {postIdx: sessionStorage.getItem('currPostIdx'), title: sessionStorage.getItem('currTitleText'), comment: sessionStorage.getItem('currCommentText')}), 
+            React.createElement(DiscussionPost, {assId: sessionStorage.getItem('selectedAssignmentId')}), 
             document.getElementById('discussion_posts')
           );
+
+          if (sessionStorage.getItem('currPostIdx') != 'null' && sessionStorage.getItem('currTitleText') != 'null' && sessionStorage.getItem('currCommentText') != 'null')
+          {
+            ReactDOM.render(
+                React.createElement(DiscussionPost, {assId: sessionStorage.getItem('selectedAssignmentId'), postIdx: sessionStorage.getItem('currPostIdx'), title: sessionStorage.getItem('currTitleText'), comment: sessionStorage.getItem('currCommentText')}), 
+                document.getElementById('discussion_posts')
+              );
+              sessionStorage.setItem('currPostIdx', null);
+              sessionStorage.setItem('currTitleText', null);
+              sessionStorage.setItem('currCommentText', null);
+          }
+
+        //   if (sessionStorage.getItem('allCurrPostIdx') != null)
+        //   {
+        //       allCurrPostIdx = JSON.parse(sessionStorage.getItem('allCurrPostIdx'));
+        //       var i = 0;
+        //       while (i < allCurrPostIdx.length)
+        //       {
+        //         if (sessionStorage.getItem('reply' + i) != null)
+        //             {
+        //                 document.getElementById(sessionStorage.getItem('selectedAssignmentId') + "post" + i).innerHTML += sessionStorage.getItem('reply' + i);
+        //             }
+        //         i++;
+        //       }
+        //   }
       }, []);
 
     // function getPosts() {

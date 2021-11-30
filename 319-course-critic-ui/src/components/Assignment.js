@@ -11,8 +11,9 @@ class Assignment extends React.Component {
         }
     }
 
-    setSelectedAssignment(assignmentName) {
+    setSelectedAssignment(assignmentName, assignmentId) {
         sessionStorage.setItem('selectedAssignment', assignmentName);
+        sessionStorage.setItem('selectedAssignmentId', assignmentId);
     }
 
     render() {
@@ -36,7 +37,7 @@ class Assignment extends React.Component {
                 <h2>{ReactHtmlParser(tempName)}</h2>
                 <p>{ReactHtmlParser(tempDesc)}</p>
                 <a href='/assignmentdiscussion'>
-                    <button onClick={this.setSelectedAssignment.bind(this, tempName)} className='replyButton'>
+                    <button onClick={this.setSelectedAssignment.bind(this, tempName, tempDivId)} className='replyButton'>
                         View Discussion
                     </button>
                 </a>
@@ -57,7 +58,7 @@ class Assignment extends React.Component {
                     <h2>{ReactHtmlParser(assignmentName)}</h2>
                     <p>{ReactHtmlParser(assignmentDescription)}</p>
                     <a href='/assignmentdiscussion'>
-                        <button onClick={this.setSelectedAssignment.bind(this, assignmentName)} className='replyButton'>
+                        <button onClick={this.setSelectedAssignment.bind(this, assignmentName, divId)} className='replyButton'>
                             View Discussion
                         </button>
                     </a>

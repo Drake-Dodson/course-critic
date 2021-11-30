@@ -11,10 +11,19 @@ export default function AssignmentFeed() {
           );
       }, []);
 
-var aIdx = 0;
+      var aIdx;
+      if (sessionStorage.getItem('aIdx') != null)
+      {
+          aIdx = sessionStorage.getItem('aIdx');
+      }
+      else
+      {
+          aIdx = 0;
+      }
 
     function addAssignment () {
       aIdx++;
+      sessionStorage.setItem('aIdx', aIdx);
       var aTitle = document.getElementById('assignmentTitle').value;
       var aDescription = document.getElementById('assignmentDescription').value;
       ReactDOM.render(

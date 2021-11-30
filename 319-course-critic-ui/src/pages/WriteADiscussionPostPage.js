@@ -3,9 +3,18 @@ import './AssignmentFeed.css'
 import {Link } from "react-router-dom";
 
 export default function WriteADiscussionPostPage() {
-    var currPostIdx = sessionStorage.length-1;
+    var currPostIdx;
+    if (sessionStorage.getItem('pIdx') != null)
+    {
+        currPostIdx = sessionStorage.getItem('pIdx');
+    }
+    else
+    {
+        currPostIdx = 0;
+    }
 function addToPosts() {
     currPostIdx++;
+    sessionStorage.setItem('pIdx', currPostIdx);
     var titleText = "" + document.getElementById("title").value;
     var commentText = "" + document.getElementById("comments").value;
     sessionStorage.setItem('currPostIdx', currPostIdx);
