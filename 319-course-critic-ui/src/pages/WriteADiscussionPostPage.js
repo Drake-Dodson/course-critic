@@ -32,12 +32,7 @@ function addToPosts() {
                 <label for="comments">Comments:</label><br/>
                 <input type="text" id="comments" name="comments"/><br/>
             </form> 
-            <button onClick={addToPosts}>Submit</button><br/>
-
-            <Link to="/assignmentdiscussion"><button>
-                    Back to Assignment Discussion
-                </button>
-                </Link>
+            <Link to="/assignmentdiscussion"><button onClick={addToPosts}>Submit</button><br/></Link>
         </div>
         </html>
     )

@@ -6,18 +6,16 @@ export default function WriteDiscussionReply() {
 
 function addToPosts() {
     var currReplyIdx = sessionStorage.getItem('selectedReply');
-    var preReply = "";
+    var replyArr = [];
     if (sessionStorage.getItem('reply' + currReplyIdx) != null)
     {
-        preReply = sessionStorage.getItem('reply' + currReplyIdx);
+        replyArr = JSON.parse(sessionStorage.getItem('reply' + currReplyIdx));
     }
     var titleText = "" + document.getElementById("title").value;
     var commentText = "" + document.getElementById("comments").value;
-    var newDiv = preReply + "<div class='asReplyBorder'>" + 
-    "<h3>" + titleText + "</h3>" + 
-    "<p>" + commentText + "</p>" + 
-    "</div>";
-    sessionStorage.setItem('reply' + currReplyIdx, newDiv);
+    replyArr.push(titleText);
+    replyArr.push(commentText);
+    sessionStorage.setItem('reply' + currReplyIdx, JSON.stringify(replyArr));
     console.log(currReplyIdx);
     console.log(sessionStorage);
 }
@@ -32,12 +30,7 @@ function addToPosts() {
                 <label for="comments">Comments:</label><br/>
                 <input type="text" id="comments" name="comments"/><br/>
             </form> 
-            <button onClick={addToPosts}>Submit</button><br/>
-
-            <Link to="/assignmentdiscussion"><button>
-                    Back to Assignment Discussion
-                </button>
-                </Link>
+            <Link to="/assignmentdiscussion"><button onClick={addToPosts}>Submit</button><br/></Link>
         </div>
         </html>
     )

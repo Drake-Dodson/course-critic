@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactHtmlParser from 'react-html-parser';
+import HTMLReactParser from 'html-react-parser';
+import DiscussionReply from './DiscussionReply';
 
 class DiscussionPost extends React.Component {
 
@@ -20,7 +22,6 @@ class DiscussionPost extends React.Component {
         {
             var assignmentId = this.props.assId;
             var postsArr = [];
-            var postIdxArr = [];
             var ssPosts = assignmentId + 'posts';
             if (sessionStorage.getItem(ssPosts) != null)
             {
@@ -36,7 +37,8 @@ class DiscussionPost extends React.Component {
                     i++;
                     var tempPostString = assignmentId + 'post' + tempPostIdx;
                     var tempReplyString = assignmentId + 'reply' + tempPostIdx;
-                    const tempRet = (
+
+                    var tempRet = (
                         <div id={ReactHtmlParser(tempPostString)}>
                     <div className='asBorder'>
                         <h3>{ReactHtmlParser(tempTitleText)}</h3>
@@ -47,10 +49,11 @@ class DiscussionPost extends React.Component {
                     </button>
                     </a>
                     </div>
+
+                    <DiscussionReply index={tempPostIdx} />
                 </div>
                     );
                     this.state.posts.push(tempRet);
-                    postIdxArr.push(tempPostIdx);
                 }
             }
     
@@ -61,7 +64,7 @@ class DiscussionPost extends React.Component {
                 var commentText = this.props.comment;
                 var postString = assignmentId + "post" + currPostIdx;
                 var replyString = assignmentId + "reply" + currPostIdx;
-                const ret = (
+                var ret = (
                     <div id={ReactHtmlParser(postString)}>
                         <div className='asBorder'>
                             <h3>{ReactHtmlParser(titleText)}</h3>
@@ -78,10 +81,8 @@ class DiscussionPost extends React.Component {
                 postsArr.push(currPostIdx);
                 postsArr.push(titleText);
                 postsArr.push(commentText);
-                postIdxArr.push(currPostIdx);
                 sessionStorage.setItem(ssPosts, JSON.stringify(postsArr));
             }
-            sessionStorage.setItem('allCurrPostIdx', JSON.stringify(postIdxArr));
         }
 
         return (
