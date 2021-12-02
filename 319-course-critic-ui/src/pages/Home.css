@@ -1,0 +1,284 @@
+.content{
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+
+    background: #FFFFFF;
+}
+.squareone {
+    position: absolute;
+    width: 390px;
+    height: 221px;
+    left: 174px;
+    top: 31px;
+
+    /* ISU Yellow */
+
+    background: #F1BE48;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  }	 
+  .squareone p {
+    position: absolute;
+    width: 158px;
+    height: 53px;
+    left: 130px;
+    top: 40px;
+
+    font-family: Alice;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 55px;
+
+    /* ISU Brown */
+
+    color: #524727;
+  }
+  .squaretwo {
+    position: absolute;
+    width: 390px;
+    height: 221px;
+    left: 609px;
+    top: 31px;
+
+    /* ISU Red */
+
+    background: #C8102E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .squaretwo p {
+    position: absolute;
+    width: 158px;
+    height: 53px;
+    left: 130px;
+    top: 40px;
+
+    font-family: Alice;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 55px;
+    
+    /* ISU Tan */
+
+    color: #CAC7A7;
+  }
+  .squarethree {
+    position: absolute;
+    width: 390px;
+    height: 221px;
+    left: 174px;
+    top: 291px;
+
+    /* ISU Brown */
+
+    background: #524727;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .squarethree p {
+    position: absolute;
+    width: 158px;
+    height: 53px;
+    left: 130px;
+    top: 40px;
+
+    font-family: Alice;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 55px;
+
+    /* ISU Yellow */
+
+    color: #F1BE48;
+
+  }
+  .squarefour {
+    position: absolute;
+    width: 390px;
+    height: 221px;
+    left: 609px;
+    top: 291px;
+
+    /* ISU Gold */
+
+    background: #9B945F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .squarefour p {
+    position: absolute;
+    width: 158px;
+    height: 53px;
+    left: 130px;
+    top: 40px;
+
+    font-family: Alice;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 55px;
+
+    /* ISU Brown */
+
+    color: #524727;
+  }
+  .squarefive {
+    position: absolute;
+    width: 390px;
+    height: 221px;
+    left: 174px;
+    top: 551px;
+
+    /* ISU Red */
+
+    background: #C8102E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .squarefive p {
+    position: absolute;
+    width: 158px;
+    height: 53px;
+    left: 130px;
+    top: 40px;
+
+    font-family: Alice;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 55px;
+
+    /* ISU Yellow */
+
+    color: #F1BE48;
+  }
+  .squaresix {
+    position: absolute;
+    width: 390px;
+    height: 221px;
+    left: 609px;
+    top: 551px;
+
+    /* ISU Tan */
+
+    background: #CAC7A7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .squaresix p {
+    position: absolute;
+    width: 158px;
+    height: 53px;
+    left: 130px;
+    top: 40px;
+
+    font-family: Alice;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 55px;
+
+    /* ISU Red */
+
+    color: #C8102E;
+  }
+  .feedbacksquare {
+    position: absolute;
+    width: 308px;
+    height: 57px;
+    left: 1072px;
+    top: 35px;
+
+    /* ISU Red */
+
+    background: #C8102E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .feedbacksquare p {
+    position: absolute;
+    width: 278px;
+    height: 47px;
+    left: 30px;
+    top: -25px;
+
+    font-family: Alice;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 41px;
+
+    color: #F1BE48;
+  }
+  .showallsquare{
+    position: absolute;
+    width: 250px;
+    height: 46px;
+    left: 1101px;
+    top: 241px;
+
+    background: #C4C4C4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .showallsquare p{
+    position: absolute;
+    width: 133px;
+    height: 36px;
+    left: 60px;
+    top: -20px;
+
+    font-family: Alice;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 34px;
+
+    color: #000000;
+  }
+
+  
+  
+  .notificationtextone {
+    position: absolute;
+    width: 177px;
+    height: 44px;
+    left: 1150px;
+    top: 75px;
+
+    font-family: Alice;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 34px;
+
+    color: #000000;
+  }
+  .notificationtexttwo {
+    position: absolute;
+    width: 177px;
+    height: 44px;
+    left: 1150px;
+    top: 115px;
+
+    font-family: Alice;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 34px;
+
+    color: #000000;
+
+  }
+  .notificationtextthree {
+    position: absolute;
+    width: 177px;
+    height: 44px;
+    left: 1150px;
+    top: 155px;
+
+    font-family: Alice;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 34px;
+
+    color: #000000;
+  }
