@@ -14,7 +14,7 @@ const Sidebar = () => {
             <nav className='nav-menu active'>
                 <ul className='nav-menu-items'>
                     {SidebarData.map((item, index) => {
-                        if(item.sidnav){
+                        if(item.subNav){
                             return (
                             <li key={index} className={item.cName}>
                                 <Link to={item.path}>
@@ -24,7 +24,6 @@ const Sidebar = () => {
                             </li>
                         );
                         }
-
                     })}
                 </ul>
             </nav>            
