@@ -1,63 +1,57 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './AssignmentFeed.css'
 import {Link} from "react-router-dom";
+import ReactDOM from 'react-dom'
+import DiscussionPost from '../components/DiscussionPost.js'
 
 export default function AssignmentDiscussion() {
+    useEffect(() => {
+        document.getElementById("aName").textContent = sessionStorage.getItem('selectedAssignment');
+        ReactDOM.render(
+            React.createElement(DiscussionPost, {assId: sessionStorage.getItem('selectedAssignmentId')}), 
+            document.getElementById('discussion_posts')
+          );
 
+          if (sessionStorage.getItem('currPostIdx') != 'null' && sessionStorage.getItem('currTitleText') != 'null' && sessionStorage.getItem('currCommentText') != 'null')
+          {
+            ReactDOM.render(
+                React.createElement(DiscussionPost, {assId: sessionStorage.getItem('selectedAssignmentId'), postIdx: sessionStorage.getItem('currPostIdx'), title: sessionStorage.getItem('currTitleText'), comment: sessionStorage.getItem('currCommentText')}), 
+                document.getElementById('discussion_posts')
+              );
+              sessionStorage.setItem('currPostIdx', null);
+              sessionStorage.setItem('currTitleText', null);
+              sessionStorage.setItem('currCommentText', null);
+          }
+      }, []);
+
+    function clearstorage() {
+        sessionStorage.clear();
+    }
+    
     return (
         <html>
             <head>
                 <title>Assignment Discussion</title>
             </head>
             <body>
+                <div id="test">
             <div className='topMargin'>
-                <Link to="/assignmentfeed"><button>
+                <Link to="/assignmentfeed"><button className='isuColorButton'>
                     Back to Assignments
                 </button>
                 </Link>
+                <button onClick={clearstorage}>clear</button>
                 <h1 id="aName">[Assignment name]: Discussion</h1>
                 <h2>Recent Posts</h2>
                 </div>
-
-                <div className='asBorder'>
-                    <h3>User1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                <div id="discussion_posts">
                 </div>
-                <div className='asBorder'>
-                    <h3>User2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                </div>
-                <div className='asBorder'>
-                    <h3>User3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                </div>
-                <div className='asBorder'>
-                    <h3>User4</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                </div>
-                <div className='asBorder'>
-                    <h3>User5</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                </div>
-                <div className='asBorder'>
-                    <h3>User6</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                </div>
-
                 <div className='bottomMargin'>
-                <input type="button" id="createAssignmentPost" name="createAssignmentPost" value="Create Post"></input>
+                <Link to="/creatediscussionpost"><button className='isuColorButton'>
+                    Create Post
+                </button>
+                </Link>
+                </div>
                 </div>
             </body>
         </html>

@@ -2,30 +2,28 @@ import React from 'react'
 import './AssignmentFeed.css'
 import {Link } from "react-router-dom";
 
-export default function WriteADiscussionPostPage() {
-    var currPostIdx;
-    if (sessionStorage.getItem('pIdx') != null)
-    {
-        currPostIdx = sessionStorage.getItem('pIdx');
-    }
-    else
-    {
-        currPostIdx = 0;
-    }
+export default function WriteDiscussionReply() {
+
 function addToPosts() {
-    currPostIdx++;
-    sessionStorage.setItem('pIdx', currPostIdx);
+    var currReplyIdx = sessionStorage.getItem('selectedReply');
+    var replyArr = [];
+    if (sessionStorage.getItem('reply' + currReplyIdx) != null)
+    {
+        replyArr = JSON.parse(sessionStorage.getItem('reply' + currReplyIdx));
+    }
     var titleText = "" + document.getElementById("title").value;
     var commentText = "" + document.getElementById("comments").value;
-    sessionStorage.setItem('currPostIdx', currPostIdx);
-    sessionStorage.setItem('currTitleText', titleText);
-    sessionStorage.setItem('currCommentText', commentText);
+    replyArr.push(titleText);
+    replyArr.push(commentText);
+    sessionStorage.setItem('reply' + currReplyIdx, JSON.stringify(replyArr));
+    console.log(currReplyIdx);
+    console.log(sessionStorage);
 }
 
     return (
         <html>
-        <div className='leftMargin' id='test2'>
-            <h1><u>Write a Discussion Post-Assignment Name</u></h1>
+        <div className='leftMargin'>
+            <h1><u>Write a Discussion Reply</u></h1>
             <form>
                 <label for="title">Title:</label><br/>
                 <input type="text" id="title" name="title"/><br/>
@@ -36,5 +34,4 @@ function addToPosts() {
         </div>
         </html>
     )
-    
 }
