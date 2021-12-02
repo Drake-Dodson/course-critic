@@ -31,12 +31,6 @@ class DiscussionReply extends React.Component {
                             );
                             this.state.replies.push(ret);
                         }
-                        /*
-                            <div className='asReplyBorder'>
-                            <h3> TitleText </h3>
-                            <p> commentText </p>
-                            </div>
-                        */
                     }
 
                     return (

@@ -6,8 +6,6 @@ import DiscussionPost from '../components/DiscussionPost.js'
 
 export default function AssignmentDiscussion() {
     useEffect(() => {
-        // getPosts(); allCurrPostIdx
-        var allCurrPostIdx;
         document.getElementById("aName").textContent = sessionStorage.getItem('selectedAssignment');
         ReactDOM.render(
             React.createElement(DiscussionPost, {assId: sessionStorage.getItem('selectedAssignmentId')}), 
@@ -24,49 +22,7 @@ export default function AssignmentDiscussion() {
               sessionStorage.setItem('currTitleText', null);
               sessionStorage.setItem('currCommentText', null);
           }
-
-        //   if (sessionStorage.getItem('allCurrPostIdx') != null)
-        //   {
-        //       allCurrPostIdx = JSON.parse(sessionStorage.getItem('allCurrPostIdx'));
-        //       var i = 0;
-        //       while (i < allCurrPostIdx.length)
-        //       {
-        //         if (sessionStorage.getItem('reply' + i) != null)
-        //             {
-        //                 document.getElementById(sessionStorage.getItem('selectedAssignmentId') + "post" + i).innerHTML += sessionStorage.getItem('reply' + i);
-        //             }
-        //         i++;
-        //       }
-        //   }
       }, []);
-
-    // function getPosts() {
-    //     var i = 0;
-    //     while (i < sessionStorage.length)
-    //     {
-    //         if (sessionStorage.getItem('post' + i) != null)
-    //         {
-    //             document.getElementById("discussion_posts").innerHTML += sessionStorage.getItem('post' + i);
-    //             document.getElementById("reply" + i).onclick = setReplyPost(i);
-    //         }
-    //         i++;
-    //     }
-    //     i = 0;
-    //     while (i < sessionStorage.length)
-    //     {
-    //         if (sessionStorage.getItem('reply' + i) != null)
-    //         {
-    //             document.getElementById("post" + i).innerHTML += sessionStorage.getItem('reply' + i);
-    //         }
-    //         i++;
-    //     }
-    //     console.log(document.getElementById("test").innerHTML);
-    //     console.log(sessionStorage);
-    // }
-
-    // function setReplyPost(postIdx) {
-    //     sessionStorage.setItem('selectedReply', postIdx)
-    // }
 
     function clearstorage() {
         sessionStorage.clear();

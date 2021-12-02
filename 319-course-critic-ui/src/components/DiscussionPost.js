@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactHtmlParser from 'react-html-parser';
-import HTMLReactParser from 'html-react-parser';
 import DiscussionReply from './DiscussionReply';
 
 class DiscussionPost extends React.Component {
