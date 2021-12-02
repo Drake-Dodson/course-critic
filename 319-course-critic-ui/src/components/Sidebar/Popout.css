@@ -1,0 +1,47 @@
+.class-menu{    
+    background: #FFFFFF;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    width: 200px;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    left: -100%;
+    top: 0px;
+    transition: 850ms;
+}
+
+.class-menu.active{    
+    left: 150px;
+    transition: 350ms;
+}
+
+.class-title{
+    position: absolute;
+
+    font-family: Alice;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 30px;
+    color: #000;
+}
+
+.class-menu-items{
+    padding-top: 80px;
+}
+
+
+
+.class-menu-items a{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+    list-style: none;
+    height: 20px;
+}
