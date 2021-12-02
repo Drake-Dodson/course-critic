@@ -5,6 +5,6 @@
     padding: 0;
 }
 
-.home, .classes, .profile{
+.home, .classes, .profile, .CourserMetricsPage, .WriteADiscussionPostPage{
     padding-left: 160px;
 }
