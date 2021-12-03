@@ -137,4 +137,61 @@
         margin-right: 10px;
         
         }
+
+        .recentfeedback
+{
+ 
+  border:10px; 
+  text-align:center;
+position: absolute;
+width: 150px;
+height: 70px;
+left: 1250px;
+top: 65px;
+border-style:solid; 
+border-color:#C8102E;; 
+background:#C8102E;;
+margin-bottom: 15px;
+margin-left: 160px;
+margin-right: 10px;
+
+}
+
+.feedback
+{
+  text-align:center;
+  border:10px; 
+position: absolute;
+width: 150px;
+height: 500px;
+left: 1250px;
+top: 160px;
+border-style:solid; 
+border-color:#CAC7A7;; 
+background:#CAC7A7;;
+margin-bottom: 15px;
+margin-left: 160px;
+margin-right: 10px;
+
+}
+
+.showall
+{
+ 
+  border:10px; 
+  text-align:center;
+position: absolute;
+width: 150px;
+height: 70px;
+left: 1250px;
+top: 690px;
+border-style:solid; 
+border-color:#C8102E;; 
+background:#C8102E;;
+margin-bottom: 15px;
+margin-left: 160px;
+margin-right: 10px;
+
+}
+
   
