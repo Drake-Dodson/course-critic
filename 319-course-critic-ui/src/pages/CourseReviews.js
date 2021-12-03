@@ -12,6 +12,7 @@ function CourseReviews() {
             </head>
             
             <body>
+                
                 <div className='center_text'>
                     <h1>
                         Course Reviews for [COMS 319]
@@ -52,6 +53,10 @@ function CourseReviews() {
                     <p>Enjoyment: 4</p>
                     <p>Grade: A-</p>
                     <p>Comment: bla bla bla</p>
+                </div>
+
+                <div className='review_button'>
+                    <a class="btn btn-primary" href="/create_review">Create Review</a>
                 </div>
             </body>
         </html>
