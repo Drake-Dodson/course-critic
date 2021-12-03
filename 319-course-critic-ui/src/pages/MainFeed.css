@@ -1,0 +1,140 @@
+.textfield {
+    font-size: large;
+    padding: 15px;
+  }
+  
+  .btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Green */
+  .submit {
+    border-color: #04AA6D;
+    color: green;
+  }
+  
+  .submit:hover {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .submitted {
+    position: absolute;
+    left: 44%;
+    top: 35%;
+  }
+  
+  .center_submitted {
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  }
+  
+  .center_text {
+  text-align:center;
+  }
+  
+  .course1 {
+  border:10px; 
+  text-align:center;
+  position: absolute;
+  width: 350px;
+  height: 340px;
+  left: 60px;
+  top: 420px;
+  border-style:solid; 
+  border-color:#F1BE48; 
+  background:#F1BE48;
+  margin-bottom: 15px;
+  margin-left: 160px;
+  margin-right: 10px;
+  }
+  .course2
+  {
+    text-align:center;
+    border:10px; 
+  position: absolute;
+  width: 350px;
+  height: 330px;
+  left: 60px;
+  top: 65px;
+  border-style:solid; 
+  border-color:#C8102E;; 
+  background:#C8102E;;
+  margin-bottom: 15px;
+  margin-left: 160px;
+  margin-right: 10px;
+  
+  }
+  
+  .course3 {
+    border:10px; 
+    text-align:center;
+    position: absolute;
+    width: 350px;
+    height: 340px;
+    left: 460px;
+    top: 420px;
+    border-style:solid; 
+    border-color:#524727; 
+    background:#524727;
+    margin-bottom: 15px;
+    margin-left: 160px;
+    margin-right: 10px;
+    }
+    .course4
+    {
+      text-align:center;
+      border:10px; 
+    position: absolute;
+    width: 350px;
+    height: 330px;
+    left: 460px;
+    top: 65px;
+    border-style:solid; 
+    border-color:#9B945F;; 
+    background:#9B945F;;
+    margin-bottom: 15px;
+    margin-left: 160px;
+    margin-right: 10px;
+    
+    }
+  
+      .course5 {
+        border:10px; 
+        text-align:center;
+        position: absolute;
+        width: 350px;
+        height: 340px;
+        left: 860px;
+        top: 420px;
+        border-style:solid; 
+        border-color:#C8102E; 
+        background:#C8102E;
+        margin-bottom: 15px;
+        margin-left: 160px;
+        margin-right: 10px;
+        }
+        .course6
+        {
+          text-align:center;
+          border:10px; 
+        position: absolute;
+        width: 350px;
+        height: 330px;
+        left: 860px;
+        top: 65px;
+        border-style:solid; 
+        border-color:#CAC7A7;; 
+        background:#CAC7A7;;
+        margin-bottom: 15px;
+        margin-left: 160px;
+        margin-right: 10px;
+        
+        }
+  
