@@ -36,7 +36,13 @@
   .profile_input {
     font-size: large;
     padding: 10px;
-}
+  }
+
+  .profile_text {
+    font-size: large;
+    padding: 10px;
+    text-align: center;
+  }
 
 .profile_form { 
     margin: 0 auto; 

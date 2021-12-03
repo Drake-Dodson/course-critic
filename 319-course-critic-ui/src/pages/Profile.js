@@ -37,7 +37,7 @@ function Profile() {
                             </div>
                             <form className="profile_form">
                             
-                                <div className="profile_input">
+                                <div className="profile_text">
                                     <p>Please enter your account email, old password, and new password:</p>
                                 </div>
                                 <div className="profile_input">
