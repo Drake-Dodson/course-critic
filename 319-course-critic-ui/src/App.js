@@ -20,7 +20,6 @@ function App() {
   return (
     <>
       <Router>
-        <Sidebar/>
         <Routes>
           <Route path='/' exact element={<Home />}></Route>
           <Route path='/classes' element={<Classes />}></Route>
@@ -35,6 +34,7 @@ function App() {
           <Route path='/pages/CourserMetricsPage' element={<CourserMetricsPage />}></Route>
           <Route path='/pages/WriteADiscussionPostPage' element={<WriteADiscussionPostPage />}></Route>
         </Routes>
+        <Sidebar/>
       </Router>
     </>
   );

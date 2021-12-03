@@ -5,7 +5,7 @@ import React from 'react';
 export const ClassRepo = [
     {
         classID: 1,
-        className: 'Com S 309 - Super duper extra long title name for class',
+        className: 'Com S 309 - Super duper extra long title name',
         classPath: 'classes/1' ,
         classScore: 4.2,
         classDifficulty: 2,
@@ -35,5 +35,15 @@ export const ClassRepo = [
         classScore: 4.2,
         classDifficulty: 2,
         averageGrade: 'A',
-    }
+    },
+    {
+        classID: 5,
+        className: 'Com S 228 - Super duper extra long title name',
+        classPath: 'classes/1' ,
+        classScore: 4.2,
+        classDifficulty: 2,
+        averageGrade: 'A',
+        description: 'Project based class'
+    },
 ]
+

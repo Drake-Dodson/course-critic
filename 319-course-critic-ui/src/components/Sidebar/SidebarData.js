@@ -1,5 +1,4 @@
 import React from 'react';
-import { ClassRepo } from '../../repositories/ClassRepo';
 import * as AiIcons from 'react-icons/ai';
 import * as MdIcons from 'react-icons/md';
 import * as CgIcons from 'react-icons/cg';
