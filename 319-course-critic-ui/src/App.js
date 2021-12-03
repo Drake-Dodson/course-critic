@@ -10,7 +10,7 @@ import AssignmentDiscussion from './pages/AssignmentDiscussion';
 import CreateReview from './pages/CreateReview';
 import ReviewSubmitted from './pages/ReviewSubmitted';
 import CourseReviews from './pages/CourseReviews';
-import CourserMetricsPage from './pages/CourserMetricsPage';
+import CourseMetricsPage from './pages/CourseMetricsPage';
 import WriteADiscussionPostPage from './pages/WriteADiscussionPostPage';
 import UserFeed from './pages/UserFeed';
 import WriteDiscussionReply from './pages/WriteDiscussionReply';
@@ -32,7 +32,7 @@ function App() {
           <Route path='/review_submitted' element={<ReviewSubmitted />}></Route>
           <Route path='/reviews' element={<CourseReviews />}></Route>
           <Route path='/creatediscussionreply' element={<WriteDiscussionReply />}></Route>
-          <Route path='/pages/CourserMetricsPage' element={<CourserMetricsPage />}></Route>
+          <Route path='/pages/CourseMetricsPage' element={<CourseMetricsPage />}></Route>
           <Route path='/pages/WriteADiscussionPostPage' element={<WriteADiscussionPostPage />}></Route>
         </Routes>
       </Router>
