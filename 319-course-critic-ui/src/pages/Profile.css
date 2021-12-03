@@ -38,6 +38,12 @@
     padding: 10px;
 }
 
+.profile_form { 
+    margin: 0 auto; 
+    width:250px;
+    padding-top: 20%;
+    }
+
 .container {
   height: 100px;
   position: relative;

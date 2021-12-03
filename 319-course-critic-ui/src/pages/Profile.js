@@ -35,7 +35,7 @@ function Profile() {
                             <div class="center_text">
                                 <h2>Change Password</h2>
                             </div>
-                            <form>
+                            <form className="profile_form">
                             
                                 <div className="input">
                                     <p> Please enter your account email, old password, and new password: </p>
