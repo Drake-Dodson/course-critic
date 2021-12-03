@@ -7,7 +7,7 @@ export default function CourseMetricsPage() {
         <div className="CourserMetricsPage">
           <h1><u>Com S 319 Course Metrics</u></h1>
 
-          <div class="row">
+          {/* <div class="row">
             <div class="column">
               <h2>Rating</h2>
               <h3>4.7</h3>
@@ -25,9 +25,38 @@ export default function CourseMetricsPage() {
               <h3>1.2</h3>
               <h3>5</h3>
             </div>
+          </div> */}
+
+          <div class="squareone">
+            <p>Rating
+              4.7/5
+            </p>
           </div>
 
+          <div class="squaretwo">
+            <p>Difficulty
+              3.2/5
+            </p>
+          </div>
+
+          <div class="squarethree">
+            <p>Time
+              1.2/5
+            </p>
+          </div>
           
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
           
           <p>Average grade:</p>
             <table>
