@@ -27,19 +27,19 @@ export default function CourseMetricsPage() {
             </div>
           </div> */}
 
-          <div class="squareone">
+          <div class="squareonecm">
             <p>Rating
               4.7/5
             </p>
           </div>
 
-          <div class="squaretwo">
+          <div class="squaretwocm">
             <p>Difficulty
               3.2/5
             </p>
           </div>
 
-          <div class="squarethree">
+          <div class="squarethreecm">
             <p>Time
               1.2/5
             </p>
@@ -57,7 +57,7 @@ export default function CourseMetricsPage() {
           <br></br>
           <br></br>
           <br></br>
-          
+
           <p>Average grade:</p>
             <table>
               <tr>
