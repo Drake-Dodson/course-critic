@@ -58,7 +58,7 @@ export default function CourseMetricsPage() {
           <br></br>
           <br></br>
 
-          <p>Average grade:</p>
+          {/* <p>Average grade:</p>
             <table>
               <tr>
                 <td>84.5%</td>
@@ -75,7 +75,26 @@ export default function CourseMetricsPage() {
               <tr>
                 <td>1 Hour 17 minutes</td>
               </tr>
-            </table>
+            </table> */}
+
+          <div class="row">
+            <div class="column">
+              <h2>Average Grade</h2>
+              <h3>84.5%</h3>
+            </div>
+            <div class="column">
+              <h2>Time Spent Per Assignment</h2>
+              <h3>5.4 Hours</h3>
+            </div>
+            <div class="column">
+              <h2>Time Spent Per Test</h2>
+              <h3>1.25 Hours</h3>
+            </div>
+          </div>
+
+
         </div>
+
+        
     )
 }
