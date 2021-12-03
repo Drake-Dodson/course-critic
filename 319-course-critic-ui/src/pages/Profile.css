@@ -7,7 +7,7 @@
 /* Set additional styling options for the columns */
   
   /* Create two unequal columns that floats next to each other */
-  .column {
+  .profile_column {
     float: left;
     padding: 10px;
     height: 1000px; /* Should be removed. Only for demonstration */
@@ -33,23 +33,23 @@
     text-align:center;
   }
 
-  .input {
+  .profile_input {
     font-size: large;
     padding: 10px;
 }
 
 .profile_form { 
     margin: 0 auto; 
-    width:250px;
+    width:300px;
     padding-top: 20%;
     }
 
-.container {
+.profile_container {
   height: 100px;
   position: relative;
 }
 
-.center {
+.profile_center {
   margin: 0;
   position: absolute;
   top: 50%;
@@ -58,7 +58,7 @@
   transform: translate(-50%, -50%);
 }
 
-.buttons {
+.profile_buttons {
     padding-top: 25px;
     padding-bottom: 25px;
 }
