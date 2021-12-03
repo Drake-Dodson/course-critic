@@ -36,6 +36,15 @@ export default function MainFeed()
                 <div className='course6'>
                 <h2 id="a1">Course</h2>
                 </div>
+                <div className='recentfeedback'>
+                <h2 id="a1">Recent Feedback</h2>
+                </div>
+                <div className='showall'>
+                <h2 id="a1">Show All</h2>
+                </div>
+                <div className='feedback'>
+                <h2 id="a1">No Feedback</h2>
+                </div>
              
                
             </body>
