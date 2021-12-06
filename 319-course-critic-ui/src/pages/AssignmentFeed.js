@@ -40,7 +40,7 @@ export default function AssignmentFeed() {
         </title>
     </head>
     <body>
-        <div className='center'>
+        <div className='afcenter'>
             <h1>
                 [course name]: Assignments
             </h1>
@@ -50,7 +50,7 @@ export default function AssignmentFeed() {
                 <label for="assignmentDescription">Description:</label><br/>
                 <input type="text" id="assignmentDescription" name="assignmentDescription"/><br/>
             </form> 
-            <button onClick={addAssignment} className='isuColorButton'>Add Assignment</button><br/>
+            <button onClick={addAssignment} className='isuColorButton'>Add Assignment</button><br/><br/>
         </div>
         <div id='allAssignments'>
         </div>
