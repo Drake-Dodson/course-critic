@@ -176,12 +176,13 @@ function Profile() {
                                     <input type="password" id="new_pass_confirm" name="new_pass_confirm" size="30"  placeholder="Confirm New Password"required></input>
                                 </p>
                                 </div>
-                                <div class="profile_container">
+                                
+                            </form>
+                            <div class="profile_container">
                                     <div class="profile_center">
                                         <button class="btn submit" onClick={validate2}>Submit</button>
                                     </div>
                                 </div>
-                            </form>
                         </div>
 
                     </div>
