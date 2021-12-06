@@ -1,17 +1,20 @@
 import React from 'react'
 import './Reviews.css'
-import {Link } from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {StaticBackend} from "../repositories/StaticBackend";
 
 const CreateReview = () => {
+
+    let {classID} = useParams();
 
     function submit() {
         StaticBackend.addReview(
             document.getElementById("title").value,
             document.getElementById("difficult").value,
             document.getElementById("enjoy").value,
-            document.getElementById("grade").textContent,
+            document.getElementById("grade").value,
             document.getElementById("description").value,
+            classID
         );
         StaticBackend.logReviewRepo();
     }
@@ -23,8 +26,8 @@ const CreateReview = () => {
             </h1>
             <form>
                 <div className="textfield">
-                    <label for="title">Title:</label><br></br>
-                    <input type="text" id="title" name="title" size="50" required></input>
+                    <label for="title">Title:</label><br/>
+                    <input type="text" id="title" name="title" size="50" required/>
                 </div>
 
                 <div className="textfield">
@@ -68,7 +71,7 @@ const CreateReview = () => {
                 </div>
 
                 <div className="textfield">
-                    <label for="comment">Comments:</label><br></br>
+                    <label for="comment">Comments:</label><br/>
                     <textarea id="description" name="comment" rows="10" cols="100">
                         Write any comments you have here.
                     </textarea>
@@ -76,7 +79,7 @@ const CreateReview = () => {
             </form>
 
             <div className="textfield">
-                <Link to= "/review_submitted">
+                <Link to= {"/class/" + classID + "/review_submitted"}>
                     <button className="btn submit" onClick={submit}>Submit</button>
                 </Link>
             </div>

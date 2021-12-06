@@ -14,24 +14,28 @@ import CourseMetricsPage from './pages/CourseMetricsPage';
 import WriteADiscussionPostPage from './pages/WriteADiscussionPostPage';
 import UserFeed from './pages/UserFeed';
 import WriteDiscussionReply from './pages/WriteDiscussionReply';
+import UserReviews from "./pages/UserReviews";
+import {StaticBackend} from "./repositories/StaticBackend";
 
 function App() {
+  StaticBackend.intializeRepos();
 
   return (
     <>
       <Router>
         <Routes>
           <Route path='/' exact element={<Home/>}/>
-          <Route path='/classes' element={<Classes/>}/>
+          <Route path='/class/:classID' element={<Classes/>}/>
           <Route path='/profile' element={<Profile/>}/>
           <Route path='/assignmentfeed' element={<AssignmentFeed/>}/>
           <Route path='/assignmentdiscussion' element={<AssignmentDiscussion/>}/>
           <Route path='/creatediscussionpost' element={<WriteADiscussionPostPage/>}/>
-          <Route path='/create_review' element={<CreateReview/>}/>
-          <Route path='/review_submitted' element={<ReviewSubmitted/>}/>
-          <Route path='/reviews' element={<CourseReviews/>}/>
+          <Route path='/class/:classID/review' element={<CreateReview/>}/>
+          <Route path='/class/:classID/review_submitted' element={<ReviewSubmitted/>}/>
+          <Route path='/class/:classID/reviews/' element={<CourseReviews/>}/>
+          <Route path='/user/reviews/' element={<UserReviews/>}/>
           <Route path='/creatediscussionreply' element={<WriteDiscussionReply/>}/>
-          <Route path='/pages/CourseMetricsPage' element={<CourseMetricsPage/>}/>
+          <Route path='/class/:classID/metrics' element={<CourseMetricsPage/>}/>
           <Route path='/pages/WriteADiscussionPostPage' element={<WriteADiscussionPostPage/>}/>
         </Routes>
         <Sidebar/>
