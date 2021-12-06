@@ -21,18 +21,18 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path='/' exact element={<Home />}></Route>
-          <Route path='/classes' element={<Classes />}></Route>
-          <Route path='/profile' element={<Profile />}></Route>
-          <Route path='/assignmentfeed' element={<AssignmentFeed />}></Route>
-          <Route path='/assignmentdiscussion' element={<AssignmentDiscussion />}></Route>
-          <Route path='/creatediscussionpost' element={<WriteADiscussionPostPage />}></Route>
-          <Route path='/create_review' element={<CreateReview />}></Route>
-          <Route path='/review_submitted' element={<ReviewSubmitted />}></Route>
-          <Route path='/reviews' element={<CourseReviews />}></Route>
-          <Route path='/creatediscussionreply' element={<WriteDiscussionReply />}></Route>
-          <Route path='/pages/CourseMetricsPage' element={<CourseMetricsPage />}></Route>
-          <Route path='/pages/WriteADiscussionPostPage' element={<WriteADiscussionPostPage />}></Route>
+          <Route path='/' exact element={<Home/>}/>
+          <Route path='/classes' element={<Classes/>}/>
+          <Route path='/profile' element={<Profile/>}/>
+          <Route path='/assignmentfeed' element={<AssignmentFeed/>}/>
+          <Route path='/assignmentdiscussion' element={<AssignmentDiscussion/>}/>
+          <Route path='/creatediscussionpost' element={<WriteADiscussionPostPage/>}/>
+          <Route path='/create_review' element={<CreateReview/>}/>
+          <Route path='/review_submitted' element={<ReviewSubmitted/>}/>
+          <Route path='/reviews' element={<CourseReviews/>}/>
+          <Route path='/creatediscussionreply' element={<WriteDiscussionReply/>}/>
+          <Route path='/pages/CourseMetricsPage' element={<CourseMetricsPage/>}/>
+          <Route path='/pages/WriteADiscussionPostPage' element={<WriteADiscussionPostPage/>}/>
         </Routes>
         <Sidebar/>
       </Router>

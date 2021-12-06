@@ -10,46 +10,46 @@
     padding: 14px 28px;
     font-size: 16px;
     cursor: pointer;
-  }
-  
-  /* Green */
-  .submit {
-    border-color: #04AA6D;
-    color: green;
-  }
-  
-  .submit:hover {
-    background-color: #04AA6D;
-    color: white;
-  }
+}
 
-  .submitted {
+/* Green */
+.submit {
+    border-color: #C8102E;
+    color: red;
+}
+
+.submit:hover {
+    background-color: #C8102E;
+    color: white;
+}
+
+.submitted {
     position: absolute;
     left: 44%;
     top: 35%;
-  }
+}
 
-  .center_submitted {
-  padding: 10px;
-  top: 50%;
-  left: 50%;
+.center_submitted {
+    padding: 10px;
+    top: 50%;
+    left: 50%;
 }
 
 .center_text {
-  text-align:center;
+    text-align: center;
 }
 
 .review_button {
-  padding-left: 160px;
-  padding-top: 15px;
+    padding-left: 160px;
+    padding-top: 15px;
 }
 
 .review {
-  border:10px; 
-  border-style:solid; 
-  border-color:#CAC7A7; 
-  background:#CAC7A7;
-  margin-bottom: 15px;
-  margin-left: 160px;
-  margin-right: 10px;
+    border: 10px;
+    border-style: solid;
+    border-color: #CAC7A7;
+    background: #CAC7A7;
+    margin-bottom: 15px;
+    margin-left: 160px;
+    margin-right: 10px;
 }
