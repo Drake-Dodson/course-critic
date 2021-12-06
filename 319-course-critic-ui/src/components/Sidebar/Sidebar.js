@@ -6,7 +6,7 @@ import * as AiIcons from 'react-icons/ai';
 import './Popout.css';
 import './Sidebar.css';
 
-const Sidebar = ({callback}) => {
+const Sidebar = () => {
 
     // Expand code provided from this stackoverflow post https://stackoverflow.com/questions/32553158/detect-click-outside-react-component
     const [expanded, setExpanded] = useState(false);
@@ -33,7 +33,7 @@ const Sidebar = ({callback}) => {
                         {ClassRepo.map((item, index) => {
                             return (
                                 <li key={index} className='class-menu-item'>
-                                    <Link to={item.classPath} onClick={close}>
+                                    <Link to={item.classPath + "/" + item.classID} onClick={close}>
                                         <span>{item.className}</span>
                                     </Link>
                                 </li>
@@ -49,7 +49,7 @@ const Sidebar = ({callback}) => {
                         if(!item.subNav){
                             return (
                                 <li key={index} className={item.cName}>
-                                    <Link to={item.path}>
+                                    <Link to={item.path} onClick={close}>
                                         {item.icon}
                                         <span>{item.title}</span>
                                     </Link>
