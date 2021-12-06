@@ -15,6 +15,7 @@ import WriteADiscussionPostPage from './pages/WriteADiscussionPostPage';
 import UserFeed from './pages/UserFeed';
 import WriteDiscussionReply from './pages/WriteDiscussionReply';
 import UserReviews from "./pages/UserReviews";
+import LogIn from './pages/LogIn';
 import {StaticBackend} from "./repositories/StaticBackend";
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
           <Route path='/creatediscussionreply' element={<WriteDiscussionReply/>}/>
           <Route path='/class/:classID/metrics' element={<CourseMetricsPage/>}/>
           <Route path='/pages/WriteADiscussionPostPage' element={<WriteADiscussionPostPage/>}/>
+          <Route path='/login' element={<LogIn/>}/>
         </Routes>
         <Sidebar/>
       </Router>
