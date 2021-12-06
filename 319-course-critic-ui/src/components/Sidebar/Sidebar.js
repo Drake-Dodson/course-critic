@@ -33,7 +33,7 @@ const Sidebar = () => {
                         {ClassRepo.map((item, index) => {
                             return (
                                 <li key={index} className='class-menu-item'>
-                                    <Link to={item.classPath + "/" + item.classID} onClick={close}>
+                                    <Link to={"class/" + item.classID} onClick={close}>
                                         <span>{item.className}</span>
                                     </Link>
                                 </li>

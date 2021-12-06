@@ -1,10 +1,22 @@
 import { ReviewRepo } from "./ReviewRepo";
+import { ClassRepo } from "./ClassRepo";
 
 export class StaticBackend{
+
     constructor() {
         let Username = "CourseCriticUsername";
-        let Password = "CourseCriticPasswrod";
+        let Password = "CourseCriticPassword";
         let Email = "CourseCritic@gmail.com";
+        sessionStorage.setItem("ReviewRepo", JSON.stringify(ReviewRepo));
+    }
+
+    static intializeRepos(){
+        sessionStorage.setItem("ReviewRepo", JSON.stringify(ReviewRepo));
+    };
+
+    static getReviewRepo(){
+        ReviewRepo = sessionStorage.getItem("ReviewRepo");
+        return ReviewRepo;
     }
 
     static addReview(title, difficultyScore, enjoyment, grade, description, classID){
@@ -20,13 +32,18 @@ export class StaticBackend{
         ReviewRepo.push(newReview);
         sessionStorage.setItem("ReviewRepo", JSON.stringify(ReviewRepo));
     }
-    
+
     static getClassScore = () => {
-        ReviewRepo = sessionStorage.getItem("ReviewRepo");
+        sessionStorage.getItem("ReviewRepo");
     }
     
     static logReviewRepo() {
         sessionStorage.getItem("ReviewRepo");
         console.log(JSON.stringify(ReviewRepo));
     }
+
+    static getClassByID(findID){
+        return ClassRepo.filter(obj => {return obj.classID === findID});
+    }
+
 }

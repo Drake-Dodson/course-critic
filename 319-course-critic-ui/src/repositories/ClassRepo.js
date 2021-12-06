@@ -2,11 +2,11 @@ import React from 'react';
 
 // Most of this information would be generated from the backend if we had a backend
 
-export const ClassRepo = [
+export let ClassRepo = [
     {
         classID: 1,
         className: 'Com S 309 - Super duper extra long title name',
-        classPath: 'classes' ,
+        classNameShort: 'Com S 309',
         classScore: 4.2,
         classDifficulty: 2,
         averageGrade: 'A',
@@ -15,7 +15,7 @@ export const ClassRepo = [
     {
         classID: 2,
         className: 'Com S 319 - Yet another really large name',
-        classPath: 'classes',
+        classNameShort: 'Com S 319',
         classScore: 4.2,
         classDifficulty: 2,
         averageGrade: 'A',
@@ -23,7 +23,7 @@ export const ClassRepo = [
     {
         classID: 3,
         className: 'Com S 363',
-        classPath: 'classes',
+        classNameShort: 'Com S 363',
         classScore: 4.2,
         classDifficulty: 2,
         averageGrade: 'A',
@@ -31,7 +31,7 @@ export const ClassRepo = [
     {
         classID: 4,
         className: 'Math 207',
-        classPath: 'classes',
+        classNameShort: 'Math 207',
         classScore: 4.2,
         classDifficulty: 2,
         averageGrade: 'A',
@@ -39,7 +39,7 @@ export const ClassRepo = [
     {
         classID: 5,
         className: 'Com S 228 - Super duper extra long title name',
-        classPath: 'classes' ,
+        classNameShort: 'Com S 228',
         classScore: 4.2,
         classDifficulty: 2,
         averageGrade: 'A',

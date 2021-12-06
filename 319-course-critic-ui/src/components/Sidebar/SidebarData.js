@@ -21,7 +21,7 @@ export const SidebarData = [
     },
     {
         title: 'Reviews',
-        path: '/reviews',
+        path: '/user/reviews',
         icon: <MdIcons.MdRateReview />,
         cName: 'nav-text',
         subNav: false

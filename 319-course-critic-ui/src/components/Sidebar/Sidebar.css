@@ -5,7 +5,7 @@
     left: 22px;
     top: 12px;
 
-    font-family: Alice;
+    font-family: Alice, serif;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -63,6 +63,7 @@
 
 .nav-text button {
     color: #FFFFFF;
+    font-family: Alice, serif;
     text-decoration: none;
     background: transparent;
     border: none !important;
@@ -74,7 +75,6 @@
     align-items: center;
     padding: 0 16px;
     border-radius: 4px;
-    cursor: pointer;
     cursor: hand;
 }
 
