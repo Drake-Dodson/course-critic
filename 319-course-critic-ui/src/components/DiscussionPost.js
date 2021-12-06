@@ -40,7 +40,7 @@ class DiscussionPost extends React.Component {
                     var tempRet = (
                         <div id={ReactHtmlParser(tempPostString)}>
                     <div className='asBorder'>
-                        <h3>{ReactHtmlParser(tempTitleText)}</h3>
+                        <h2>{ReactHtmlParser(tempTitleText)}</h2>
                         <p>{ReactHtmlParser(tempCommentText)}</p>
                         <a href="/creatediscussionreply">
                             <button onClick={this.setReplyPost.bind(this, tempPostIdx) } className='replyButton' id={ReactHtmlParser(tempReplyString)}>
@@ -66,7 +66,7 @@ class DiscussionPost extends React.Component {
                 var ret = (
                     <div id={ReactHtmlParser(postString)}>
                         <div className='asBorder'>
-                            <h3>{ReactHtmlParser(titleText)}</h3>
+                            <h2>{ReactHtmlParser(titleText)}</h2>
                             <p>{ReactHtmlParser(commentText)}</p>
                             <a href="/creatediscussionreply">
                                 <button onClick={this.setReplyPost.bind(this, currPostIdx) } className='replyButton' id={ReactHtmlParser(replyString)}>

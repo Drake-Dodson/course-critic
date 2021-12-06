@@ -25,7 +25,7 @@ class DiscussionReply extends React.Component {
                             j++;
                             var ret = (
                                 <div className='asReplyBorder'>
-                                    <h3>{ReactHtmlParser(replyTitle)}</h3>
+                                    <h2>{ReactHtmlParser(replyTitle)}</h2>
                                     <p>{ReactHtmlParser(replyComment)}</p>
                                 </div>
                             );
