@@ -6,15 +6,42 @@ function Classes() {
 
     return (
         <div className="classes">
-            <h1>
-                Here is where the Class page would go
-            </h1>
-            <p>
-                Hello, is anyone there? I am scared, I don't know where I am. Everything is white
-            </p>
-            <Link to={"/class/" + classID + "/reviews"}>
-                Link to reviews
+            <body>
+	<div class="content">
+ <form id="Main Course View" action="" >
+   
+    <div class="titleunderline"></div>
+	<div class="title">
+		<p>COM S 319</p>
+	</div>
+	<div class="classscore">
+		<p>Class Score:</p>
+	</div>
+	<div class="classscoredata">
+		<p id="ClassScoreData">4.7</p>
+	</div>
+	<div class="courselinksmainbox">
+		<p id="Course Assigments" onclick="" >Assignments</p>
+		<p><br/><br/>Metrics</p>
+        <p>
+		<Link to={"/class/" + classID + "/reviews"}>
+                <br/><br/><br/>reviews
             </Link>
+            </p>
+	</div>
+	<div class="courselinksheaderbox">
+		<p>Course Links</p>
+	</div>
+	<div class="coursediscriptionbox">
+		<p>Discription:<br/>-insert here-</p>
+	</div>
+	 
+	 
+  </form>
+  </div>
+  
+</body>
+
         </div>
     )
 }
