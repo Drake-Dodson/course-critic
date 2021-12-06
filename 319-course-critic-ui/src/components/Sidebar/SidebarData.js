@@ -1,5 +1,4 @@
 import React from 'react';
-import { ClassRepo } from '../../repositories/ClassRepo';
 import * as AiIcons from 'react-icons/ai';
 import * as MdIcons from 'react-icons/md';
 import * as CgIcons from 'react-icons/cg';
@@ -22,7 +21,7 @@ export const SidebarData = [
     },
     {
         title: 'Reviews',
-        path: '/reviews',
+        path: '/user/reviews',
         icon: <MdIcons.MdRateReview />,
         cName: 'nav-text',
         subNav: false

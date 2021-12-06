@@ -1,0 +1,126 @@
+.asBorder {
+    border:10px; 
+    border-style:solid; 
+    border-color:#CAC7A7; 
+    background:#CAC7A7;
+    margin-bottom: 15px;
+    margin-left: 160px;
+    margin-right: 10px;
+}
+.center {
+    margin-left: 150px;
+}
+.right {
+    text-align:right;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 100px;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.squareonecm {
+    position: absolute;
+    width: 125px;
+    height: 120px;
+    left: 175px;
+    top: 50px;
+
+    /* ISU Yellow */
+
+    background: #F1BE48;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  }	 
+  .squareonecm p {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 20px;
+    top: 10px;
+
+    font-family: Alice;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 50px;
+
+    /* ISU Brown */
+
+    color: #524727;
+  }
+
+  .squaretwocm {
+    position: absolute;
+    width: 125px;
+    height: 120px;
+    left: 550px;
+    top: 50px;
+
+    /* ISU Yellow */
+
+    background: #F1BE48;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  }	 
+  .squaretwocm p {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 20px;
+    top: 10px;
+
+    font-family: Alice;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 50px;
+
+    /* ISU Brown */
+
+    color: #524727;
+  }
+
+  .squarethreecm {
+    position: absolute;
+    width: 125px;
+    height: 120px;
+    left: 1000px;
+    top: 50px;
+
+    /* ISU Yellow */
+
+    background: #F1BE48;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  }	 
+  .squarethreecm p {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 20px;
+    top: 10px;
+
+    font-family: Alice;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 50px;
+
+    /* ISU Brown */
+
+    color: #524727;
+  }
+

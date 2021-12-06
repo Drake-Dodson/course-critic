@@ -1,8 +1,11 @@
 import React from 'react'
 import './Reviews.css'
-import {Link } from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 
-function ReviewSubmitted() { 
+function ReviewSubmitted() {
+
+    let {classID} = useParams();
+
     return (
         <div className="classes">
             <h1>
@@ -15,14 +18,20 @@ function ReviewSubmitted() {
                 </h2>
 
                 <div className="center_submitted">
-                    <Link to="/create_review">
-                    <button class="btn submit">Create Another Review</button>
+                    <Link to={"/class/" + classID + "/review"}>
+                        <button class="btn submit">Create Another Review</button>
                     </Link>
                 </div>
 
                 <div className="center_submitted">
                     <Link to="/">
                     <button class="btn submit">Return to Home Page</button>
+                    </Link>
+                </div>
+
+                <div className="center_submitted">
+                    <Link to={"/class/" + classID + "/reviews"}>
+                        <button className="btn submit">View Class Reviews</button>
                     </Link>
                 </div>
 

@@ -33,15 +33,39 @@
 
 .class-menu-items{
     padding-top: 80px;
+    padding-bottom: 80px;
+    list-style: none;
+    text-align: left;
 }
 
+.class-menu-item{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    list-style: none;
+    text-align: left;
+}
 
+.exit-button {
+    font-size: 2rem;
+    right: 10px;
+    cursor: pointer;
+    cursor: hand;
+    border:none !important;
+    background: transparent;
+    display:block;
+    position: relative;
+}
+
+.exit-button:hover {
+    color: #C8102E;
+
+}
 
 .class-menu-items a{
     display: flex;
     justify-content: start;
     align-items: center;
     padding: 20px 0px 20px 0px;
-    list-style: none;
+    
     height: 20px;
 }
