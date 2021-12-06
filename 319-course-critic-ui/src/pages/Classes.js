@@ -1,4 +1,5 @@
 import React from 'react'
+import './Classes.css'
 import {Link, useParams} from "react-router-dom";
 
 function Classes() {
