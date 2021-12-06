@@ -45,10 +45,10 @@ export default function AssignmentFeed() {
                 [course name]: Assignments
             </h1>
             <form>
-                <label for="assignmentTitle">Title:</label><br/>
-                <input type="text" id="assignmentTitle" name="assignmentTitle"/><br/>
-                <label for="assignmentDescription">Description:</label><br/>
-                <input type="text" id="assignmentDescription" name="assignmentDescription"/><br/>
+                <label for="assignmentTitle" className='aFeedTitleComment'>Title:</label><br/>
+                <input type="text" className='inputText' id="assignmentTitle" name="assignmentTitle"/><br/>
+                <label for="assignmentDescription" className='aFeedTitleComment'>Description:</label><br/>
+                <input type="text" className='inputText' id="assignmentDescription" name="assignmentDescription"/>
             </form> 
             <button onClick={addAssignment} className='isuColorButton'>Add Assignment</button><br/><br/>
         </div>
