@@ -1,154 +1,186 @@
 .content{
-		position: relative;
-		width: 1440px;
-		height: 1024px;
+	position: relative;
+	width: 1440px;
+	height: 1024px;
 
-		background: #FFFFFF;
-	}
-	.titleunderline{
-		position: absolute;
-		width: 1056.01px;
-		height: 0px;
-		left: 270px;
-		top: 127px;
+	background: #FFFFFF;
+}
+.titleunderline{
+	position: absolute;
+	width: 1056.01px;
+	height: 0px;
+	left: 270px;
+	top: 127px;
 
-		border: 4px solid #000000;
-	}
-	.title{
-		position: absolute;
-		width: 487px;
-		height: 55px;
-		left: 283px;
-		top: 0px;
+	border: 4px solid #000000;
+}
+.title p{
+	position: absolute;
+	width: 487px;
+	height: 55px;
+	left: 283px;
+	top: 60px;
 
-		font-family: Aldrich;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 64px;
-		line-height: 63px;
-	
-		color: #000000;
-	}
-	.classscore{
-		position: absolute;
-		width: 312px;
-		height: 24px;
-		left: 794px;
-		top: 60px;
+	font-family: Alice;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 64px;
+	line-height: 63px;
 
-		font-family: Aldrich;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 32px;
-		line-height: 31px;
+	color: #000000;
+}
+.classscore p{
+	position: absolute;
+	width: 312px;
+	height: 24px;
+	left: 790px;
+	top: 90px;
 
-		color: #000000;
-	}
-	.classscoredata{
-		position: absolute;
-		width: 79px;
-		height: 69px;
-		left: 960px;
-		top: 10px;
+	font-family: Aldrich;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	line-height: 31px;
 
-		font-family: Iceberg;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 58px;
-		line-height: 71px;
+	color: #000000;
+}
+.classscoredata p{
+	position: absolute;
+	width: 79px;
+	height: 69px;
+	left: 960px;
+	top: 60px;
 
-		color: #C8102E;
-	}
-	.courselinksmainbox{
-		position: absolute;
-		width: 267px;
-		height: 262px;
-		left: 270px;
-		top: 190px;
+	font-family: Iceberg;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 58px;
+	line-height: 71px;
 
-		background: #FFFFFF;
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+	color: #C8102E;
+}
+.courselinksmainbox{
+	position: absolute;
+	width: 267px;
+	height: 262px;
+	left: 270px;
+	top: 190px;
 
-	}
-	.courselinksmainbox p {
-		position: absolute;
-		width: 157px;
-		height: 28px;
-		left: 43px;
-		top: 70px;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-		font-family: Aldrich;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 24px;
-		line-height: 23px;
-		text-decoration-line: underline;
+}
+.courselinksmainbox p1 {
+	position: absolute;
+	width: 157px;
+	height: 28px;
+	left: 43px;
+	top: 95px;
 
-		color: #000000;
-	}
-	.courselinksmainbox a {
-		position: absolute;
-		width: 157px;
-		height: 28px;
-		left: 43px;
-		top: 70px;
+	font-family: Aldrich;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 23px;
+	text-decoration-line: underline;
 
-		font-family: Aldrich;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 24px;
-		line-height: 23px;
-		text-decoration-line: underline;
+	color: #000000;
+}
+.courselinksmainbox p2 {
+	position: absolute;
+	width: 157px;
+	height: 28px;
+	left: 43px;
+	top: 140px;
 
-		color: #000000;
-	}
-	.courselinksheaderbox{
-		position: absolute;
-		width: 267px;
-		height: 52px;
-		left: 270px;
-		top: 190px;
+	font-family: Aldrich;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 23px;
+	text-decoration-line: underline;
 
-		background: #CAC7A7;
-	} 
-	.courselinksheaderbox p {
-		position: absolute;
-		width: 226px;
-		height: 36px;
-		left: 21px;
-		top: -10px;
+	color: #000000;
+}
+.courselinksmainbox p3 {
+	position: absolute;
+	width: 157px;
+	height: 28px;
+	left: 43px;
+	top: 185px;
 
-		font-family: Aldrich;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 24px;
-		line-height: 23px;
-		text-align: center;
+	font-family: Aldrich;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 23px;
+	text-decoration-line: underline;
 
-		color: #000000;
-	}
-	.coursediscriptionbox{
-		position: absolute;
-		width: 720px;
-		height: 262px;
-		left: 613px;
-		top: 190px;
+	color: #000000;
+}
+.courselinksmainbox a {
+	position: absolute;
+	width: 157px;
+	height: 28px;
+	left: 43px;
+	top: 70px;
 
-		background: #CAC7A7;
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-	}
-	.coursediscriptionbox p {
-		position: absolute;
-		width: 637px;
-		height: 201px;
-		left: 21px;
-		top: 7px;
+	font-family: Aldrich;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 23px;
+	text-decoration-line: underline;
 
-		font-family: Aldrich;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 24px;
-		line-height: 23px;
-	
-		color: #000000;
-	}
+	color: #000000;
+}
+.courselinksheaderbox{
+	position: absolute;
+	width: 267px;
+	height: 52px;
+	left: 270px;
+	top: 190px;
+
+	background: #CAC7A7;
+} 
+.courselinksheaderbox p {
+	position: absolute;
+	width: 226px;
+	height: 36px;
+	left: 21px;
+	top: 15px;
+
+	font-family: Aldrich;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 23px;
+	text-align: center;
+
+	color: #000000;
+}
+.coursediscriptionbox{
+	position: absolute;
+	width: 720px;
+	height: 262px;
+	left: 613px;
+	top: 190px;
+
+	background: #CAC7A7;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.coursediscriptionbox p {
+	position: absolute;
+	width: 637px;
+	height: 201px;
+	left: 21px;
+	top: 7px;
+
+	font-family: Aldrich;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 23px;
+
+	color: #000000;
+}
