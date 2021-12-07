@@ -1,5 +1,5 @@
+
 function LogInValidation() {
-    valCheck = true;
     var resultEmailCheck = emailCheck(document.forms["User Information"]["Email"].value);
     var labelNotifyEmail1 = getNotification(Boolean(resultEmailCheck), "Email");
     document.getElementById("errorReport1").appendChild(labelNotifyEmail1);
@@ -8,7 +8,7 @@ function LogInValidation() {
     var labelNotifyPwd = getNotification(Boolean(resultPwdCheck), "Password");
     document.getElementById("errorReport2").appendChild(labelNotifyPwd);
 
-    if (valCheck == true) {
+    if (resultEmailCheck == true && resultPwdCheck == true) {
         //TODO update
         window.location.href = "/";
 
@@ -42,14 +42,13 @@ function getNotification(bool, ID) {
 }
 
 function emailCheck(email) {
-    atESplit = email.split('@');
+    var atESplit = email.split('@');
     if (atESplit.length == 2 && alphaNumCheck(atESplit[0])) {
-        periodSplit = atESplit[1].split('.')
+       var periodSplit = atESplit[1].split('.')
         if (periodSplit.length == 2 && alphaNumCheck(periodSplit[0] + periodSplit[1])) {
             return true;
         }
     }
-    valCheck = false;
     return false;
 }
 
@@ -58,7 +57,6 @@ function alphaNumCheck(entry) {
     if (entry != null && entry.match(regex)) {
         return true;
     } else {
-        valCheck = false;
         return false;
     }
 }

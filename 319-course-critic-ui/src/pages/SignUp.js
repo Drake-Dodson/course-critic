@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 import "SignUp.css"
-import "SignUpVerification.js"
+import './SignUpVerification.js'
 
 export default function SignUpPage() {
 

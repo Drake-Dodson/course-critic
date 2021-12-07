@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import './LogIn.css';
-import "LoginVerification.js"
+import './LoginVerification.js'
 
 export default function LogInPage() {
 
