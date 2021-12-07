@@ -23,7 +23,7 @@
 		width: 158px;
 		height: 53px;
 		left: 130px;
-		top: 40px;
+		top: 75px;
 
 		font-family: Alice;
 		font-style: normal;
@@ -52,7 +52,7 @@
 		width: 158px;
 		height: 53px;
 		left: 130px;
-		top: 40px;
+		top: 75px;
 
 		font-family: Alice;
 		font-style: normal;
@@ -81,7 +81,7 @@
 		width: 158px;
 		height: 53px;
 		left: 130px;
-		top: 40px;
+		top: 75px;
 
 		font-family: Alice;
 		font-style: normal;
@@ -111,7 +111,7 @@
 		width: 158px;
 		height: 53px;
 		left: 130px;
-		top: 40px;
+		top: 75px;
 
 		font-family: Alice;
 		font-style: normal;
@@ -140,7 +140,7 @@
 		width: 158px;
 		height: 53px;
 		left: 130px;
-		top: 40px;
+		top: 75px;
 
 		font-family: Alice;
 		font-style: normal;
@@ -169,7 +169,7 @@
 		width: 158px;
 		height: 53px;
 		left: 130px;
-		top: 40px;
+		top: 75px;
 
 		font-family: Alice;
 		font-style: normal;
@@ -193,12 +193,12 @@
 		background: #C8102E;
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	  }
-	  .feedbacksquaretext{
+	  .feedbacksquaretext p{
 		position: absolute;
 		width: 278px;
 		height: 47px;
 		left: 1102px;
-		top: 10px;
+		top: 45px;
 
 		font-family: Alice;
 		font-style: normal;
@@ -218,7 +218,7 @@
 		background: #C4C4C4;
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	  }
-	  .showallsquaretext{
+	  .showallsquaretext p{
 		position: absolute;
 		width: 133px;
 		height: 36px;
@@ -236,12 +236,12 @@
 
 	  
 	  
-	  .notificationtextone {
+	  .notificationtextone p {
 		position: absolute;
 		width: 177px;
 		height: 44px;
 		left: 1150px;
-		top: 75px;
+		top: 100px;
 
 		font-family: Alice;
 		font-style: normal;
@@ -251,12 +251,12 @@
 
 		color: #000000;
 	  }
-	  .notificationtexttwo {
+	  .notificationtexttwo p {
 		position: absolute;
 		width: 177px;
 		height: 44px;
 		left: 1150px;
-		top: 115px;
+		top: 145px;
 
 		font-family: Alice;
 		font-style: normal;
@@ -267,12 +267,12 @@
 		color: #000000;
 
 	  }
-	  .notificationtextthree {
+	  .notificationtextthree p {
 		position: absolute;
 		width: 177px;
 		height: 44px;
 		left: 1150px;
-		top: 155px;
+		top: 185px;
 
 		font-family: Alice;
 		font-style: normal;
