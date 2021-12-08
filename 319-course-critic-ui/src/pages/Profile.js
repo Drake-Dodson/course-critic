@@ -130,13 +130,13 @@ function Profile() {
                         <p>""UserName""</p>
                     </div>
                     <div className="profile_buttons">
-                        <a class="btn btn-primary" href="/Reviews">Reviewed Courses</a>
+                        <a class="btn btn-primary" href="/user/reviews">Reviewed Courses</a>
                     </div>
                     <div className="profile_buttons">
                         <a class="btn btn-primary" href="/Profile">Change Username</a>
                     </div>
                     <div className="profile_buttons">
-                        <a class="btn btn-primary" href="/">Log Out</a>
+                        <a class="btn btn-primary" href="/login">Log Out</a>
                     </div>
                 </div>
 
