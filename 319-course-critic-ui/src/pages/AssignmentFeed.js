@@ -14,7 +14,7 @@ export default function AssignmentFeed() {
 
     useEffect(() => {
         ReactDOM.render(
-            React.createElement(Assignment), 
+            React.createElement(Assignment, {courseName: Course.classNameShort}), 
             document.getElementById('allAssignments')
           );
       }, []);
@@ -35,7 +35,7 @@ export default function AssignmentFeed() {
       var aTitle = document.getElementById('assignmentTitle').value;
       var aDescription = document.getElementById('assignmentDescription').value;
       ReactDOM.render(
-        React.createElement(Assignment, {name: aTitle, description: aDescription, index: aIdx}), 
+        React.createElement(Assignment, {name: aTitle, description: aDescription, index: aIdx, courseName: Course.classNameShort}), 
         document.getElementById('allAssignments')
       );
     }

@@ -27,10 +27,6 @@ export default function AssignmentDiscussion() {
               sessionStorage.setItem('currCommentText', null);
           }
       }, []);
-
-    function clearstorage() {
-        sessionStorage.clear();
-    }
     
     return (
         <div id="test">
@@ -38,8 +34,7 @@ export default function AssignmentDiscussion() {
                 <Link to={"/class/" + classID + "/assignments"}><button className='isuColorButton'>
                     Back to Assignments
                 </button>
-                </Link>
-                <button onClick={clearstorage}>clear</button><br/><br/>
+                </Link><br/><br/>
                 <h1 id="aName">[Assignment name]: Discussion</h1>
                 <h2>Recent Posts</h2><br/>
                 </div>

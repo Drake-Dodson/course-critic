@@ -20,9 +20,11 @@ class Assignment extends React.Component {
     render() {
         var assignmentArr = [];
         this.state.assignments = [];
-        if (sessionStorage.getItem('allAssignments') != null)
+        var nameClass = this.props.courseName;
+        var ssClassString = nameClass + 'allAssignments';
+        if (sessionStorage.getItem(ssClassString) != null)
         {
-            assignmentArr = JSON.parse(sessionStorage.getItem('allAssignments'));
+            assignmentArr = JSON.parse(sessionStorage.getItem(ssClassString));
             var i = 0;
             while (i < assignmentArr.length)
             {
@@ -69,7 +71,7 @@ class Assignment extends React.Component {
             assignmentArr.push(assignmentName);
             assignmentArr.push(assignmentDescription);
             assignmentArr.push(aIdx);
-            sessionStorage.setItem('allAssignments', JSON.stringify(assignmentArr));
+            sessionStorage.setItem(ssClassString, JSON.stringify(assignmentArr));
         }
         
         return (
