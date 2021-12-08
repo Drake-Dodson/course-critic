@@ -1,5 +1,5 @@
 
-export function LogInValidation() {
+function LogInValidation() {
     var resultEmailCheck = emailCheck(document.forms["User Information"]["Email"].value);
     var labelNotifyEmail1 = getNotification(Boolean(resultEmailCheck), "Email");
     document.getElementById("errorReport1").appendChild(labelNotifyEmail1);
