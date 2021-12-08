@@ -45,6 +45,11 @@ function CourseReviews(props) {
                 <Link to={"/class/" + classID + "/review"} className="btn btn-primary">
                     Create Review
                 </Link >
+            </div><br/><br/>
+            <div className='review_button'>
+                <Link to={"/class/" + classID} className="btn btn-primary">
+                    Course Overview
+                </Link >
             </div>
             <Sidebar
                 login={false}

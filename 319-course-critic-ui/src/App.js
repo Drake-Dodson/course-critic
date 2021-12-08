@@ -18,6 +18,7 @@ import UserReviews from "./pages/UserReviews";
 import LogIn from './pages/LogIn';
 import {StaticBackend} from "./repositories/StaticBackend";
 import {useState} from "react";
+import SignUpPage from "./pages/SignUp";
 
 function App() {
   StaticBackend.intializeRepos();
@@ -43,6 +44,7 @@ function App() {
           <Route path='/class/:classID/assignments/discussion/reply' element={<WriteDiscussionReply/>}/>
           <Route path='/class/:classID/metrics'  element={<CourseMetricsPage/>}/>
           <Route path='/login' element={<LogIn/>}/>
+          <Route path='/signup' element={<SignUpPage/>}/>
         </Routes>
         {/*<Sidebar*/}
         {/*  login={false}*/}

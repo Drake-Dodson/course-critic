@@ -25,8 +25,8 @@ function ReviewSubmitted() {
                 </div>
 
                 <div className="center_submitted">
-                    <Link to="/">
-                    <button class="btn submit">Return to Home Page</button>
+                    <Link to={"/class/" + classID}>
+                    <button class="btn submit">Return to Course Page</button>
                     </Link>
                 </div>
 

@@ -1,22 +1,29 @@
 import React from 'react'
 import './CourseMetricsPage.css'
 import Sidebar from "../components/Sidebar/Sidebar";
+import {useParams} from "react-router-dom";
+import {StaticBackend} from "../repositories/StaticBackend";
 
 export default function CourseMetricsPage() {
+
+    let { classID } = useParams();
+    let CourseArray = StaticBackend.getClassByID(classID);
+    let Course = CourseArray[0];
+
+    StaticBackend.updateClassMetrics();
+
     return (
       
         <div className="CourserMetricsPage">
-          <h1><u>Com S 319 Course Metrics</u></h1>
+          <h1><u>{Course.classNameShort + " Metrics"}</u></h1>
 
           <div class="squareonecm">
-            <p>Rating
-              4.7/5
-            </p>
+          <p>{"Rating \n" + Course.classScore + "/5"}
+          </p>
           </div>
 
           <div class="squaretwocm">
-            <p>Difficulty
-              3.2/5
+            <p>{"Difficulty\n" + Course.classDifficulty + "/5"}
             </p>
           </div>
 
@@ -44,7 +51,7 @@ export default function CourseMetricsPage() {
           <div class="row">
             <div class="column">
               <h2>Average Grade</h2>
-              <h3>84.5%</h3>
+              <h3>{Course.averageGrade + "%"}</h3>
             </div>
             <div class="column">
               <h2>Time Spent Per Assignment</h2>

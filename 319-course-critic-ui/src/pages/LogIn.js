@@ -6,6 +6,8 @@ import Sidebar from "../components/Sidebar/Sidebar";
 
 export default function LogInPage() {
 
+
+
     return (
         <div className="login">
             <h1 className="header" id="header" >Course <br />Critic</h1>
