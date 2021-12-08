@@ -1,6 +1,7 @@
 import React from 'react'
 import './Profile.css'
 import {Link } from "react-router-dom";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 function Profile() { 
     
@@ -120,74 +121,71 @@ function Profile() {
     }
     
     return (
-        <html>
-            <head>
-            <title>
-                User Settings
-            </title>
-            </head>
-            
-            <body>
-                <div class="profile">
-                    <div class="row">
-                        
-                        <div class="profile_column left">
-                            <h2>User Information</h2>
-                            <div className="profile_buttons">
-                                <p>""UserName""</p>
-                            </div>
-                            <div className="profile_buttons">
-                                <a class="btn btn-primary" href="/Reviews">Reviewed Courses</a>
-                            </div>
-                            <div className="profile_buttons">
-                                <a class="btn btn-primary" href="/Profile">Change Username</a>
-                            </div>
-                            <div className="profile_buttons">
-                                <a class="btn btn-primary" href="/">Log Out</a>
-                            </div>
+        <div class="profile">
+            <div class="row">
+
+                <div class="profile_column left">
+                    <h2>User Information</h2>
+                    <div className="profile_buttons">
+                        <p>""UserName""</p>
+                    </div>
+                    <div className="profile_buttons">
+                        <a class="btn btn-primary" href="/user/reviews">Reviewed Courses</a>
+                    </div>
+                    <div className="profile_buttons">
+                        <a class="btn btn-primary" href="/Profile">Change Username</a>
+                    </div>
+                    <div className="profile_buttons">
+                        <a class="btn btn-primary" href="/login">Log Out</a>
+                    </div>
+                </div>
+
+                <div class="profile_column right">
+                    <div class="center_text">
+                        <h2>Change Password</h2>
+                    </div>
+                    <form id="password_reset" className="profile_form">
+
+                        <div className="profile_text">
+                            <p>Please enter your account email, old password, and new password:</p>
                         </div>
-                        
-                        <div class="profile_column right">
-                            <div class="center_text">
-                                <h2>Change Password</h2>
-                            </div>
-                            <form id="password_reset" className="profile_form">
-                            
-                                <div className="profile_text">
-                                    <p>Please enter your account email, old password, and new password:</p>
-                                </div>
-                                <div className="profile_input">
-                                <p id="Email">
-                                    <input type="text" id="email" name="email" size="30" placeholder="Email" required></input>  
-                                </p>
-                                </div>
-                                <div className="profile_input">
-                                <p id="PASSWORD_OLD">
-                                    <input type="password" id="old_pass" name="old_pass" size="30" placeholder="Old Password" required></input>
-                                </p>
-                                </div>
-                                <div className="profile_input">
-                                <p id="PASSWORD_1">
-                                    <input type="password" id="new_pass" name="new_pass" size="30" placeholder="New Password" required></input>
-                                </p>
-                                </div>
-                                <div className="profile_input">
-                                <p id="PASSWORD_2">
-                                    <input type="password" id="new_pass_confirm" name="new_pass_confirm" size="30"  placeholder="Confirm New Password"required></input>
-                                </p>
-                                </div>
-                                
-                            </form>
-                            <div class="profile_container">
-                                    <div class="profile_center">
-                                        <button class="btn submit" onClick={validate2}>Submit</button>
-                                    </div>
-                                </div>
+                        <div className="profile_input">
+                            <p id="Email">
+                                <input type="text" id="email" name="email" size="30" placeholder="Email"
+                                       required></input>
+                            </p>
+                        </div>
+                        <div className="profile_input">
+                            <p id="PASSWORD_OLD">
+                                <input type="password" id="old_pass" name="old_pass" size="30"
+                                       placeholder="Old Password" required></input>
+                            </p>
+                        </div>
+                        <div className="profile_input">
+                            <p id="PASSWORD_1">
+                                <input type="password" id="new_pass" name="new_pass" size="30"
+                                       placeholder="New Password" required></input>
+                            </p>
+                        </div>
+                        <div className="profile_input">
+                            <p id="PASSWORD_2">
+                                <input type="password" id="new_pass_confirm" name="new_pass_confirm" size="30"
+                                       placeholder="Confirm New Password" required></input>
+                            </p>
+                        </div>
+
+                    </form>
+                    <div class="profile_container">
+                        <div class="profile_center">
+                            <button class="btn submit" onClick={validate2}>Submit</button>
                         </div>
                     </div>
                 </div>
-            </body>
-        </html>
+            </div>
+            <Sidebar
+                login={false}
+            />
+        </div>
     )
 }
 

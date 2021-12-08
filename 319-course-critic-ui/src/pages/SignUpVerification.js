@@ -59,7 +59,7 @@ function passwordConfCheck(entry, entryConf) {
 function emailCheck(email) {
     var atESplit = email.split('@');
     if (atESplit.length == 2 && alphaNumCheck(atESplit[0])) {
-        periodSplit = atESplit[1].split('.')
+        let periodSplit = atESplit[1].split('.')
         if (periodSplit.length == 2 && alphaNumCheck(periodSplit[0] + periodSplit[1])) {
             return true;
         }

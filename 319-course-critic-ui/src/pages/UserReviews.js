@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import ReviewCard from "../components/ReviewCard";
 import {ReviewRepo} from "../repositories/ReviewRepo";
 import {useParams} from "react-router-dom";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 function CourseReviews(props) {
 
@@ -32,6 +33,9 @@ function CourseReviews(props) {
                     )
                 })}
             </ul>
+            <Sidebar
+                login={false}
+            />
         </div>
     )
 }

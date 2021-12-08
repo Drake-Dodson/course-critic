@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactHtmlParser from 'react-html-parser';
 import DiscussionReply from './DiscussionReply';
+import {useParams} from "react-router-dom";
 
 class DiscussionPost extends React.Component {
 
@@ -42,7 +43,7 @@ class DiscussionPost extends React.Component {
                     <div className='asBorder'>
                         <h2>{ReactHtmlParser(tempTitleText)}</h2>
                         <p>{ReactHtmlParser(tempCommentText)}</p>
-                        <a href="/creatediscussionreply">
+                        <a href="discussion/reply">
                             <button onClick={this.setReplyPost.bind(this, tempPostIdx) } className='replyButton' id={ReactHtmlParser(tempReplyString)}>
                         Reply
                     </button>

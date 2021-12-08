@@ -1,10 +1,14 @@
 import React, { useEffect } from 'react'
 import './AssignmentFeed.css'
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import ReactDOM from 'react-dom'
 import DiscussionPost from '../components/DiscussionPost.js'
+import Sidebar from "../components/Sidebar/Sidebar";
 
 export default function AssignmentDiscussion() {
+
+    let {classID} = useParams();
+
     useEffect(() => {
         document.getElementById("aName").textContent = sessionStorage.getItem('selectedAssignment');
         ReactDOM.render(
@@ -29,14 +33,9 @@ export default function AssignmentDiscussion() {
     }
     
     return (
-        <html>
-            <head>
-                <title>Assignment Discussion</title>
-            </head>
-            <body>
-                <div id="test">
+        <div id="test">
             <div className='topMargin'>
-                <Link to="/assignmentfeed"><button className='isuColorButton'>
+                <Link to={"/class/" + classID + "/assignments"}><button className='isuColorButton'>
                     Back to Assignments
                 </button>
                 </Link>
@@ -47,13 +46,14 @@ export default function AssignmentDiscussion() {
                 <div id="discussion_posts">
                 </div>
                 <div className='bottomMargin'>
-                <Link to="/creatediscussionpost"><button className='isuColorButton'>
+                <Link to={"/class/" + classID + "/assignments/discussion/create"}><button className='isuColorButton'>
                     Create Post
                 </button>
                 </Link>
-                </div>
-                </div>
-            </body>
-        </html>
+            </div>
+            <Sidebar
+                login={false}
+            />
+        </div>
     )
 }

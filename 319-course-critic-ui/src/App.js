@@ -17,30 +17,38 @@ import WriteDiscussionReply from './pages/WriteDiscussionReply';
 import UserReviews from "./pages/UserReviews";
 import LogIn from './pages/LogIn';
 import {StaticBackend} from "./repositories/StaticBackend";
+import {useState} from "react";
+import SignUpPage from "./pages/SignUp";
 
 function App() {
   StaticBackend.intializeRepos();
+
+  const [sidebarEnabled, setSidebarEnable] = useState(true);
+  const enableSidebar = () => setSidebarEnable(true);
+  const disableSidebar = () => setSidebarEnable(false);
 
   return (
     <>
       <Router>
         <Routes>
-          <Route path='/' exact element={<Home/>}/>
+          <Route path='/' exact element={<Home/>} />
           <Route path='/class/:classID' element={<Classes/>}/>
           <Route path='/profile' element={<Profile/>}/>
-          <Route path='/assignmentfeed' element={<AssignmentFeed/>}/>
-          <Route path='/assignmentdiscussion' element={<AssignmentDiscussion/>}/>
-          <Route path='/creatediscussionpost' element={<WriteADiscussionPostPage/>}/>
+          <Route path='/class/:classID/assignments' element={<AssignmentFeed/>}/>
+          <Route path='/class/:classID/assignments/discussion'  element={<AssignmentDiscussion/>}/>
+          <Route path='/class/:classID/assignments/discussion/create' element={<WriteADiscussionPostPage/>}/>
           <Route path='/class/:classID/review' element={<CreateReview/>}/>
           <Route path='/class/:classID/review_submitted' element={<ReviewSubmitted/>}/>
           <Route path='/class/:classID/reviews/' element={<CourseReviews/>}/>
           <Route path='/user/reviews/' element={<UserReviews/>}/>
-          <Route path='/creatediscussionreply' element={<WriteDiscussionReply/>}/>
-          <Route path='/class/:classID/metrics' element={<CourseMetricsPage/>}/>
-          <Route path='/pages/WriteADiscussionPostPage' element={<WriteADiscussionPostPage/>}/>
+          <Route path='/class/:classID/assignments/discussion/reply' element={<WriteDiscussionReply/>}/>
+          <Route path='/class/:classID/metrics'  element={<CourseMetricsPage/>}/>
           <Route path='/login' element={<LogIn/>}/>
+          <Route path='/signup' element={<SignUpPage/>}/>
         </Routes>
-        <Sidebar/>
+        {/*<Sidebar*/}
+        {/*  login={false}*/}
+        {/*/>*/}
       </Router>
     </>
   );

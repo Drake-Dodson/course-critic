@@ -24,8 +24,6 @@ export let ReviewRepo = [
         description: "Too hard",
         classID: 1
     },
-    
-    
     {
         title: "[insert professor] is hilarious",
         difficultyScore: 3,
@@ -42,8 +40,6 @@ export let ReviewRepo = [
         description: "Funny guy. made a lot of jokes. I liked this class.",
         classID: 2
     },
-    
-    
     {
         title: "THIS CLASS SUCKS",
         difficultyScore: 5,
@@ -67,5 +63,21 @@ export let ReviewRepo = [
         grade: "B",
         description: "I love homework and I am a masochist. Since this class had so much homework it caused me physical pain I ended up enhying it a lot.",
         classID: 3
+    },
+    {
+        title: "It was alright, can't really complain got an A",
+        difficultyScore: 2,
+        enjoyment: 3,
+        grade: "A",
+        description: "Decent class, not too hard",
+        classID: 5
+    },
+    {
+        title: "My favorite class I've taken!",
+        difficultyScore: 2,
+        enjoyment: 5,
+        grade: "A",
+        description: "I had an absolute blast taking this class, the teacher is amazing and the assignments are super fun!",
+        classID: 4
     }
 ]

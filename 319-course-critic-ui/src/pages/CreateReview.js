@@ -2,27 +2,29 @@ import React from 'react'
 import './Reviews.css'
 import {Link, useParams} from "react-router-dom";
 import {StaticBackend} from "../repositories/StaticBackend";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 const CreateReview = () => {
 
     let {classID} = useParams();
+    let CourseArray = StaticBackend.getClassByID(classID);
+    let Course = CourseArray[0];
 
     function submit() {
         StaticBackend.addReview(
             document.getElementById("title").value,
-            document.getElementById("difficult").value,
-            document.getElementById("enjoy").value,
+            parseInt(document.getElementById("difficult").value),
+            parseInt(document.getElementById("enjoy").value),
             document.getElementById("grade").value,
             document.getElementById("description").value,
             classID
         );
-        StaticBackend.logReviewRepo();
     }
 
     return (
         <div className="classes">
             <h1>
-                Write a Review
+                {"Write a Review for " + Course.classNameShort}
             </h1>
             <form>
                 <div className="textfield">
@@ -83,6 +85,14 @@ const CreateReview = () => {
                     <button className="btn submit" onClick={submit}>Submit</button>
                 </Link>
             </div>
+            <div className="textfield">
+                <Link to= {"/class/" + classID + "/reviews"}>
+                    <button className="btn submit" onClick={submit}>Cancel</button>
+                </Link>
+            </div>
+            <Sidebar
+                login={false}
+            />
         </div>
     )
 }
