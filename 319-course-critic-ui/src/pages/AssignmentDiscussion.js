@@ -40,9 +40,9 @@ export default function AssignmentDiscussion() {
                     Back to Assignments
                 </button>
                 </Link>
-                <button onClick={clearstorage}>clear</button>
+                <button onClick={clearstorage}>clear</button><br/><br/>
                 <h1 id="aName">[Assignment name]: Discussion</h1>
-                <h2>Recent Posts</h2>
+                <h2>Recent Posts</h2><br/>
                 </div>
                 <div id="discussion_posts">
                 </div>
