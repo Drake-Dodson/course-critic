@@ -1,5 +1,6 @@
 import React from 'react'
 import './Home.css'
+import Sidebar from "../components/Sidebar/Sidebar";
 
 function Home() {
     return (
@@ -57,6 +58,9 @@ function Home() {
 
 				</form>
 			</div>
+			<Sidebar
+				login={false}
+			/>
 		</div>
     )
 }

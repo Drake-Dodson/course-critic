@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactHtmlParser from 'react-html-parser';
+import {useParams} from "react-router-dom";
 
 class Assignment extends React.Component {
 
@@ -36,7 +37,7 @@ class Assignment extends React.Component {
                     <div id={ReactHtmlParser(tempDivId)} className='asBorder'>
                 <h2>{ReactHtmlParser(tempName)}</h2>
                 <p>{ReactHtmlParser(tempDesc)}</p>
-                <a href='/assignmentdiscussion'>
+                <a href='assignments/discussion'>
                     <button onClick={this.setSelectedAssignment.bind(this, tempName, tempDivId)} className='replyButton'>
                         View Discussion
                     </button>
@@ -57,7 +58,7 @@ class Assignment extends React.Component {
                 <div id={ReactHtmlParser(divId)} className='asBorder'>
                     <h2>{ReactHtmlParser(assignmentName)}</h2>
                     <p>{ReactHtmlParser(assignmentDescription)}</p>
-                    <a href='/assignmentdiscussion'>
+                    <a href='assignments/discussion/'>
                         <button onClick={this.setSelectedAssignment.bind(this, assignmentName, divId)} className='replyButton'>
                             View Discussion
                         </button>

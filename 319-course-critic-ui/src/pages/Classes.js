@@ -1,9 +1,13 @@
 import React from 'react'
 import './Classes.css'
 import { Link, useParams } from "react-router-dom";
+import {StaticBackend} from "../repositories/StaticBackend";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 function Classes() {
 	let { classID } = useParams();
+	let CourseArray = StaticBackend.getClassByID(classID);
+	let Course = CourseArray[0];
 
 	return (
 		<div className="classes">
@@ -11,25 +15,35 @@ function Classes() {
 			<div class="titleunderline">
 			</div>
 			<div class="title">
-				<p>COM S 319</p>
+				<p>{Course.classNameShort}</p>
 			</div>
 			<div class="classscore">
 				<p>Class Score:</p>
 			</div>
-			<div class="classscoredata">
-				<p id="ClassScoreData">4.7</p>
+			<div className="classscoredata">
+				<p className="score" id="ClassScoreData">{Course.classScore}</p>
+				<p className="outta"> /5</p>
 			</div>
 			<div class="courselinksmainbox">
-				<p1>Assignments</p1>
-				<p2>Metrics</p2>
-				<p3>Reviews</p3>
+				<Link className="assign-link" to={"/class/" + classID + "/assignments"}>
+					<span>Assignments</span>
+				</Link>
+				<Link className="metrics-link" to={"/class/" + classID + "/metrics"}>
+					<span>Metrics</span>
+				</Link>
+				<Link className="reviews-link"to={"/class/" + classID + "/reviews"}>
+					<span>Reviews</span>
+				</Link>
 			</div>
 			<div class="courselinksheaderbox">
 				<p>Course Links</p>
 			</div>
 			<div class="coursediscriptionbox">
-				<p>Discription:<br />-insert here-</p>
+				<p>Course Description:<br/>{Course.description}</p>
 			</div>
+			<Sidebar
+				login={false}
+			/>
 
 		</div>
 	)

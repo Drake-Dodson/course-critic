@@ -2,6 +2,7 @@ import React from 'react'
 import './Reviews.css'
 import {Link, useParams} from "react-router-dom";
 import {StaticBackend} from "../repositories/StaticBackend";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 const CreateReview = () => {
 
@@ -83,6 +84,9 @@ const CreateReview = () => {
                     <button className="btn submit" onClick={submit}>Submit</button>
                 </Link>
             </div>
+            <Sidebar
+                login={false}
+            />
         </div>
     )
 }

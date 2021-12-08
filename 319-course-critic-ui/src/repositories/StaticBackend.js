@@ -44,7 +44,7 @@ export class StaticBackend{
     }
 
     static getClassByID(findID){
-        return ClassRepo.filter(obj => {return obj.classID === findID});
+        return ClassRepo.filter(obj => {return obj.classID == findID});
     }
 
 }
