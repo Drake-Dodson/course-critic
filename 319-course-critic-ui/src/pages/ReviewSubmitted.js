@@ -1,6 +1,7 @@
 import React from 'react'
 import './Reviews.css'
 import {Link, useParams} from "react-router-dom";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 function ReviewSubmitted() {
 
@@ -24,8 +25,8 @@ function ReviewSubmitted() {
                 </div>
 
                 <div className="center_submitted">
-                    <Link to="/">
-                    <button class="btn submit">Return to Home Page</button>
+                    <Link to={"/class/" + classID}>
+                    <button class="btn submit">Return to Course Page</button>
                     </Link>
                 </div>
 
@@ -36,6 +37,9 @@ function ReviewSubmitted() {
                 </div>
 
             </div>
+            <Sidebar
+                login={false}
+            />
         </div>
     )
 }

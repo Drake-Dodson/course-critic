@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import './LogIn.css';
-import './LoginVerification.js'
+import {LogInValidation} from "./LoginVerification";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 export default function LogInPage() {
+
+
 
     return (
         <div className="login">
@@ -18,14 +21,20 @@ export default function LogInPage() {
                     <label>Password:<br /></label>
                     <input id="password" name="password" type="password" />
                 </p>
-                <p id="Submit">
-                    <input type="button" id="submit" name="submit" value="Submit" onCLick="LogInValidation()" />
-                </p>
+                {/*<p id="Submit">*/}
+                {/*    <input type="button" id="submit" name="submit" value="Submit" onCLick={LogInValidation} />*/}
+                {/*</p>*/}
+                <Link to="/">
+                    <input type="button" id="submit" name="submit" value="Submit"/>
+                </Link>
                 <p>
                     <label>Dont have an account?<br /></label>
                     <a href="/signup" >SignUp:</a>
                 </p>
             </form>
+            <Sidebar
+                login={true}
+            />
         </div>
     )
 }

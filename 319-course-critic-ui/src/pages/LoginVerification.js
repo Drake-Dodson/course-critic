@@ -1,5 +1,5 @@
 
-function LogInValidation() {
+export function LogInValidation() {
     var resultEmailCheck = emailCheck(document.forms["User Information"]["Email"].value);
     var labelNotifyEmail1 = getNotification(Boolean(resultEmailCheck), "Email");
     document.getElementById("errorReport1").appendChild(labelNotifyEmail1);
@@ -11,9 +11,7 @@ function LogInValidation() {
     if (resultEmailCheck == true && resultPwdCheck == true) {
         //TODO update
         window.location.href = "/";
-
     }
-
 }
 
 function getNotification(bool, ID) {

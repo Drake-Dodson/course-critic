@@ -44,7 +44,7 @@
 
 	color: #000000;
 }
-.classscoredata p{
+.score{
 	position: absolute;
 	width: 79px;
 	height: 69px;
@@ -59,6 +59,23 @@
 
 	color: #C8102E;
 }
+
+.outta {
+	position: absolute;
+	width: 79px;
+	height: 69px;
+	left: 1040px;
+	top: 70px;
+
+	font-family: Iceberg;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 71px;
+
+	color: #000000;
+}
+
 .courselinksmainbox{
 	position: absolute;
 	width: 267px;
@@ -70,12 +87,12 @@
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
-.courselinksmainbox p1 {
+.assign-link {
 	position: absolute;
 	width: 157px;
 	height: 28px;
 	left: 43px;
-	top: 95px;
+	top: 75px;
 
 	font-family: Aldrich;
 	font-style: normal;
@@ -86,12 +103,12 @@
 
 	color: #000000;
 }
-.courselinksmainbox p2 {
+.metrics-link {
 	position: absolute;
 	width: 157px;
 	height: 28px;
 	left: 43px;
-	top: 140px;
+	top: 120px;
 
 	font-family: Aldrich;
 	font-style: normal;
@@ -102,12 +119,12 @@
 
 	color: #000000;
 }
-.courselinksmainbox p3 {
+.reviews-link {
 	position: absolute;
 	width: 157px;
 	height: 28px;
 	left: 43px;
-	top: 185px;
+	top: 165px;
 
 	font-family: Aldrich;
 	font-style: normal;
@@ -118,22 +135,7 @@
 
 	color: #000000;
 }
-.courselinksmainbox a {
-	position: absolute;
-	width: 157px;
-	height: 28px;
-	left: 43px;
-	top: 70px;
 
-	font-family: Aldrich;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 24px;
-	line-height: 23px;
-	text-decoration-line: underline;
-
-	color: #000000;
-}
 .courselinksheaderbox{
 	position: absolute;
 	width: 267px;
@@ -169,6 +171,7 @@
 	background: #CAC7A7;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .coursediscriptionbox p {
 	position: absolute;
 	width: 637px;
@@ -184,3 +187,11 @@
 
 	color: #000000;
 }
+
+.div-review{
+	position: absolute;
+	bottom: 130px;
+	left: 110px;
+
+}
+
